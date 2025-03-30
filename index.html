@@ -1,298 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Suman::Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suman Chaulagain's Terminal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="bg-gradient-to-b from-green-500 to-green-800 text-white">
-<!-- Sticky container for navbar and profile image -->
-<div class="sticky top-0 z-50">
-    <!-- Navigation menu -->
-    <nav class="bg-gray-700 py-2 fixed w-full top-0 left-0 z-50 h-20">
-        <div class="container flex justify-between items-center my-5">
-            <div class="text-xl font-bold ml-40">
-                Suman's Portfolio
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
             </div>
-            <div class="flex space-x-4">
-                <a class="hover:bg-gray-800 text-white px-4 py-2
-                              no-underline transition duration-300
-                              bg-transparent hover:bg-gray-700"
-                   href="#about">About</a>
-                <a class="hover:bg-gray-800 text-white px-4 py-2
-                              no-underline transition duration-300
-                              bg-transparent hover:bg-gray-700"
-                   href="#projects">Projects</a>
-                <a class="hover:bg-gray-800 text-white px-4 py-2
-                              no-underline transition duration-300
-                              bg-transparent hover:bg-gray-700"
-                   href="#skills">Skills</a>
-                <a class="hover:bg-gray-800 text-white px-4 py-2
-                              no-underline transition duration-300
-                              bg-transparent hover:bg-gray-700"
-                   href="#contact">Contact</a>
-            </div>
+            <div class="terminal-title" id="terminal-title">loading@portfolio:~ — bash — 80x24</div>
         </div>
-    </nav>
-
-    <!-- Profile image -->
-    <div class="relative">
-        <div class="w-36 h-36 rounded-full bg-white absolute top-0
-                        left-1/2 transform -translate-x-1/2 z-50">
-            <img alt="imageofProfile"
-                 class="w-36 h-36 rounded-full border-4 border-green-600"
-                 src=
-                         "https://media.geeksforgeeks.org/wp-content/uploads/20240327094110/pro.jpg" />
-        </div>
-    </div> <!-- White circle for profile image -->
-</div>
-
-<!-- Main content -->
-<div class="mb-16 container mx-auto pt-20">
-    <!-- About section -->
-    <section id="about"
-             class="m-20 justi-center text-center mt-20 relative
-                   my-5 mb-16 px-4 py-4 rounded-lg shadow-md relative
-                   overflow-hidden bg-gradient-to-b from-gray-600 to-gray-800">
-        <h2 class="text-2xl font-bold mb-4 text-center">
-            About Suman
-        </h2>
-        <p class="text-base">
-            Hi, I'm Suman, a passionate full-stack developer with a
-            focus on building scalable and responsive web applications.
-            I have extensive experience in front-end technologies
-            such as HTML, CSS, and JavaScript, along with expertise in
-            popular frameworks like React.js. On the back end, I specialize
-            in Node.js and Express.js for building robust server-side
-            applications. My goal is to leverage my skills and creativity
-            to deliver innovative solutions that meet and exceed
-            client expectations.
-        </p>
-        <a
-                class="inline-block mt-5 px-4 py-2 rounded-md bg-green-500
-                       text-white hover:bg-blue-600 transition duration-300">
-            Resume
-        </a>
-    </section>
-
-    <!-- Projects section -->
-    <section id="projects"
-             class="m-20 rounded mb-16 bg-gradient-to-b from-gray-600
-                   to-gray-800 text-white mb-8 px-4 py-10">
-        <h2 class="text-4xl font-bold mb-10 text-center">
-            Projects
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-
-            <!-- Project  -->
-            <div
-                    class="bg-gray-800 p-4 shadow rounded overflow-hidden
-                           transition-transform duration-300 transform
-                           scale-100 hover:scale-110">
-                <img src=
-                             "https://media.geeksforgeeks.org/wp-content/uploads/20240327093718/img.jpg"
-                     alt="Travel Website" class="w-full h-auto">
-                <h3 class="font-bold mt-4">Travel Website</h3>
-                <p class="text-sm leading-relaxed">
-                    A travel booking website that allows users to search for
-                    destinations, book flights, hotels, and plan their itinerary.
-                </p>
-            </div>
-            <div
-                    class="bg-gray-800 p-4 shadow rounded overflow-hidden
-                           transition-transform duration-300 transform
-                           scale-100 hover:scale-110">
-                <img src=
-                             "https://media.geeksforgeeks.org/wp-content/uploads/20240327093718/img.jpg"
-                     alt="Travel Website" class="project-image">
-                <h3 class="font-bold mt-4">Travel Website</h3>
-                <p class="text-sm leading-relaxed">
-                    A travel booking website that allows users to search for
-                    destinations, book flights, hotels, and plan their itinerary.</p>
-            </div>
-            <div
-                    class="bg-gray-800 p-4 shadow rounded overflow-hidden
-                           transition-transform duration-300 transform
-                           scale-100 hover:scale-110">
-                <img src=
-                             "https://media.geeksforgeeks.org/wp-content/uploads/20240327093718/img.jpg"
-                     alt="Travel Website" class="project-image">
-                <h3 class="font-bold mt-4">Travel Website</h3>
-                <p class="text-sm leading-relaxed">
-                    A travel booking website that allows users to search for
-                    destinations, book flights, hotels, and plan their itinerary.</p>
-            </div>
-            <div
-                    class="bg-gray-800 p-4 shadow rounded overflow-hidden
-                           transition-transform duration-300 transform
-                           scale-100 hover:scale-110">
-                <img src=
-                             "https://media.geeksforgeeks.org/wp-content/uploads/20240327093718/img.jpg"
-                     alt="Travel Website" class="project-image">
-                <h3 class="font-bold mt-4">Travel Website</h3>
-                <p class="text-sm leading-relaxed">
-                    A travel booking website that allows users to search for
-                    destinations, book flights, hotels, and plan their itinerary.</p>
-            </div>
-            <div
-                    class="bg-gray-800 p-4 shadow rounded overflow-hidden
-                           transition-transform duration-300 transform
-                           scale-100 hover:scale-110">
-                <img src=
-                             "https://media.geeksforgeeks.org/wp-content/uploads/20240327093718/img.jpg"
-                     alt="Travel Website" class="project-image">
-                <h3 class="font-bold mt-4">Travel Website</h3>
-                <p class="text-sm leading-relaxed">
-                    A travel booking website that allows users to search for
-                    destinations, book flights, hotels, and plan their itinerary.</p>
-            </div>
-            <div
-                    class="bg-gray-800 p-4 shadow rounded overflow-hidden
-                           transition-transform duration-300 transform
-                           scale-100 hover:scale-110">
-                <img src=
-                             "https://media.geeksforgeeks.org/wp-content/uploads/20240327093718/img.jpg"
-                     alt="Travel Website" class="project-image">
-                <h3 class="font-bold mt-4">Travel Website</h3>
-                <p class="text-sm leading-relaxed">
-                    A travel booking website that allows users to search for
-                    destinations, book flights, hotels, and plan their itinerary.</p>
-            </div>
-            <div
-                    class="bg-gray-800 p-4 shadow rounded overflow-hidden
-                           transition-transform duration-300 transform
-                           scale-100 hover:scale-110">
-                <img src=
-                             "https://media.geeksforgeeks.org/wp-content/uploads/20240327093718/img.jpg"
-                     alt="Travel Website" class="project-image">
-                <h3 class="font-bold mt-4">Travel Website</h3>
-                <p class="text-sm leading-relaxed">
-                    A travel booking website that allows users to search for
-                    destinations, book flights, hotels, and plan their itinerary.</p>
-            </div>
-            <div
-                    class="bg-gray-800 p-4 shadow rounded overflow-hidden
-                           transition-transform duration-300 transform
-                           scale-100 hover:scale-110">
-                <img src=
-                             "https://media.geeksforgeeks.org/wp-content/uploads/20240327093718/img.jpg"
-                     alt="Travel Website" class="project-image">
-                <h3 class="font-bold mt-4">Travel Website</h3>
-                <p class="text-sm leading-relaxed">
-                    A travel booking website that allows users to search for
-                    destinations, book flights, hotels, and plan their itinerary.</p>
-            </div>
-            <div
-                    class="bg-gray-800 p-4 shadow rounded overflow-hidden
-                           transition-transform duration-300 transform
-                           scale-100 hover:scale-110">
-                <img src=
-                             "https://media.geeksforgeeks.org/wp-content/uploads/20240327093718/img.jpg"
-                     alt="Travel Website" class="project-image">
-                <h3 class="font-bold mt-4">Travel Website</h3>
-                <p class="text-sm leading-relaxed">
-                    A travel booking website that allows users to search for
-                    destinations, book flights, hotels, and plan their itinerary.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills section -->
-    <section id="skills"
-             class="m-20 p-10 mb-16 rounded-lg shadow-md text-white relative
-                   overflow-hidden rounded mb-16 bg-gradient-to-b
-                   from-gray-600 to-gray-800 text-white mb-8 px-4 py-10">
-        <h2 class="text-2xl font-bold mb-4">Skills</h2>
-        <!-- Skill progress bars -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-                <p class="font-bold">HTML</p>
-                <div class="bg-gray-600 h-4 w-full rounded-full">
-                    <div class="bg-green-400 h-full rounded-full w-4/5"></div>
+        <div class="terminal-body" id="terminal">
+            <div class="terminal-output">
+                <div class="command-line">
+                    <span class="prompt">visitor@portfolio:~$</span>
+                    <span class="command">booting</span>
                 </div>
-            </div>
-            <div>
-                <p class="font-bold">CSS</p>
-                <div class="bg-gray-600 h-4 w-full rounded-full">
-                    <div class="bg-green-400 h-full rounded-full w-4/5"></div>
-                </div>
-            </div>
-            <div>
-                <p class="font-bold">JavaScript</p>
-                <div class="bg-gray-600 h-4 w-full rounded-full">
-                    <div class="bg-green-400 h-full rounded-full w-4/5"></div>
-                </div>
-            </div>
-            <div>
-                <p class="font-bold">React.js</p>
-                <div class="bg-gray-600 h-4 w-full rounded-full">
-                    <div class="bg-green-400 h-full rounded-full w-4/5">
+                <div class="output">
+                    <pre class="ascii-art" id="loading-ascii">
+   _____ __  __    _    _   _    ____ ___ _   _ _____ ____  
+  / ____|  \/  |  / \  | \ | |  / ___|_ _| \ | | ____|  _ \ 
+ | (___ | |\/| | / _ \ |  \| | | |  _ | ||  \| |  _| | |_) |
+  \___ \| |  | |/ ___ \| |\  | | |_| || || |\  | |___|  _ < 
+  ____) |_|  |_/_/   \_\_| \_|  \____|___|_| \_|_____|_| \_\
+                    </pre>
+                    <p id="loading-text">Initializing terminal portfolio...</p>
+                    <div class="construction">
+                        <i class="fas fa-hard-hat"></i> Portfolio under active development <i class="fas fa-tools"></i>
                     </div>
                 </div>
             </div>
-            <div>
-                <p class="font-bold">Node.js</p>
-                <div class="bg-gray-600 h-4 w-full rounded-full">
-                    <div class="bg-green-400 h-full rounded-full w-3/5"></div>
-                </div>
-            </div>
-            <div>
-                <p class="font-bold">Express.js</p>
-                <div class="bg-gray-600 h-4 w-full rounded-full">
-                    <div class="bg-green-400 h-full rounded-full"
-                         style="width: 65%;"></div>
-                </div>
+            <div class="terminal-input">
+                <span class="prompt">visitor@portfolio:~$</span>
+                <input type="text" class="command-input" id="command-input" autofocus disabled>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Contact section -->
-    <section id="contact"
-             class="m-20 p-10 rounded-lg shadow-md text-white relative
-                   overflow-hidden rounded mb-16 bg-gradient-to-b
-                   from-gray-600 to-gray-800 flex">
-        <div class="w-1/2">
-            <h2 class="mb-20 text-2xl leading-6 font-bold mb-4">
-                Contact Me
-            </h2>
-            <!-- Contact details -->
-            <p>Email: example@example.com</p>
-            <p>Phone: +1234567890</p>
-            <!-- Hire Me button -->
-            <a href="#"
-               class="inline-block px-4 my-5 py-2 rounded-md bg-green-500
-                           text-white hover:bg-blue-600 transition duration-300">
-                Hire Me</a>
-            <!-- Social media links -->
-            <div class="flex items-center space-x-4 mt-5">
-                <!-- LinkedIn -->
-                <a href="#"
-                   class="inline-block px-4 py-2 rounded-md bg-green-500
-                               text-white hover:bg-blue-600 transition duration-300">
-                    LinkedIn</a>
-                <!-- GitHub -->
-                <a href="#"
-                   class="inline-block px-4 py-2 rounded-md bg-green-500
-                               text-white hover:bg-blue-600 transition duration-300">
-                    GitHub</a>
-                <!-- Twitter -->
-                <a href="#"
-                   class="inline-block px-4 py-2 rounded-md bg-green-500
-                               text-white hover:bg-blue-600 transition duration-300">
-                    Twitter</a>
-            </div>
-        </div>
-        <div class="w-1/2">
-            <!-- Image section -->
-            <img
-                    src=
-                            "https://media.geeksforgeeks.org/wp-content/uploads/20240327094110/pro.jpg"
-                    alt="Your Image"
-                    class="w-72 h-72 mx-auto">
-        </div>
-    </section>
-</div>
+    <script src="script.js" type="module"></script>
 </body>
-
 </html>
