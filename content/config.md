@@ -1,2 +1,2 @@
-username: suman
-welcomeMessage: Welcome to Suman Chaulagain's terminal portfolio! LAMP Stack | Web Development | DevOps
+[cite_start]username: Suman Chaulagain [cite: 73]
+welcomeMessage: Welcome to my personal portfolio.
