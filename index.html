@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suman Chaulagain | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="matrix-rain" class="matrix-rain"></canvas>
+
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+            </div>
+            <div class="terminal-title" id="terminal-title">root@suman:~ — zsh — 80x24</div>
+        </div>
+        <div class="terminal-body" id="terminal">
+            <div class="terminal-output">
+                <div class="command-line">
+                    <span class="prompt">visitor@suman:~$</span>
+                    <span class="command">./start_portfolio.sh</span>
+                </div>
+                <div class="output">
+                    <pre class="ascii-art glow" id="loading-ascii">
+                        .-')                  _   .-')       ('-.          .-') _  
+                       ( OO ).               ( '.( OO )_    ( OO ).-.     ( OO ) ) 
+                      (_)---\_)  ,--. ,--.    ,--.   ,--.)  / . --. / ,--./ ,--,'  
+                      /    _ |   |  | |  |    |   `.'   |   | \-.  \  |   \ |  |\  
+                      \  :` `.   |  | | .-')  |         | .-'-'  |  | |    \|  | ) 
+                       '..`''.)  |  |_|( OO ) |  |'.'|  |  \| |_.'  | |  .     |/  
+                      .-._)   \  |  | | `-' / |  |   |  |   |  .-.  | |  |\    |   
+                      \       / ('  '-'(_.-'  |  |   |  |   |  | |  | |  | \   |   
+                       `-----'    `-----'     `--'   `--'   `--' `--' `--'  `--'   
+                      </pre>
+                    <p id="loading-text" class="glow">> Decrypting user profile...</p>
+                    <div class="construction">
+                        <i class="fas fa-code-branch"></i> SYSTEM STATUS: ACTIVE DEVELOPMENT <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="hacker-grid">
+                        <div class="grid-item">>_ Suman Chaulagain</div>
+                        <div class="grid-item">>_ Full Stack Developer</div>
+                        <div class="grid-item">>_ Linux Enthusiast</div>
+                        <div class="grid-item">>_ Technical Writing</div>
+                    </div>
+                </div>
+            </div>
+            <div class="terminal-input">
+                <span class="prompt glow">visitor@suman:~$</span>
+                <input type="text" class="command-input" id="command-input" autofocus disabled
+                    placeholder="awaiting_input...">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+    <script>
+        const canvas = document.getElementById('matrix-rain');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const nums = '0123456789';
+        const symbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+
+        const alphabet = katakana + latin + nums + symbols;
+
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+
+        const rainDrops = [];
+
+        for (let x = 0; x < columns; x++) {
+            rainDrops[x] = 1;
+        }
+
+        const draw = () => {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0f0';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        };
+
+        setInterval(draw, 30);
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+
+</html>
