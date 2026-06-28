@@ -6,10 +6,10 @@
 - CLI tool development
 
 ## Personal
-- Gaming (PC & console)
+- Gaming
 - Anime & manga
 - Technical reading
-- Learning new programming languages
+- Learning
 
 ## Creative
 - Digital art
