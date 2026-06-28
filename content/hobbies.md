@@ -7,7 +7,6 @@
 
 ## Personal
 - Gaming
-- Anime & manga
 - Technical reading
 - Learning
 
