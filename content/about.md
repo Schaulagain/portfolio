@@ -10,7 +10,7 @@ A results-driven Software Engineer with over 3 years of experience in architecti
 
 * **Bachelor of Engineering (Honors) in Computing (Software Engineering)**
     * University of Northampton, Northampton, United Kingdom
-    * *Sep 2017-Dec 2020*
+    * Sep 2017- Dec 2020
 
 ### Professional Development & Certifications
 
