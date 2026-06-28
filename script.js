@@ -1,4 +1,3 @@
-// Markdown parser with improved list handling
 function parseMarkdown(md) {
     // Headers
     md = md.replace(/^# (.*$)/gm, '<h1>$1</h1>');

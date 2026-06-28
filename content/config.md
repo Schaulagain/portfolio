@@ -1,2 +1,2 @@
-[cite_start]username: Suman Chaulagain [cite: 73]
+username: suman
 welcomeMessage: Welcome to my personal portfolio.
