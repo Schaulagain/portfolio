@@ -1,117 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="matrix">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suman Chaulagain | Portfolio</title>
-    <meta name="description" content="Suman Chaulagain – Full Stack Developer & Linux Enthusiast">
-    <meta property="og:title" content="Suman Chaulagain | Portfolio">
-    <meta property="og:image" content="content/preview.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>Suman Chaulagain — Software Engineer</title>
+    <meta name="description" content="Suman Chaulagain is a Software Engineer with 3+ years building full-stack web applications with PHP (Laravel, Symfony), JavaScript and Linux.">
+    <meta name="author" content="Suman Chaulagain">
+    <link rel="canonical" href="https://sumanchaulagain.info.np/">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Suman Chaulagain">
+    <meta property="og:url" content="https://sumanchaulagain.info.np/">
+    <meta property="og:title" content="Suman Chaulagain — Software Engineer">
+    <meta property="og:description" content="Full-stack developer building scalable web apps with Laravel &amp; Symfony. Linux enthusiast.">
+    <meta property="og:image" content="https://sumanchaulagain.info.np/content/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A terminal window showing Suman Chaulagain's portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Suman Chaulagain — Software Engineer">
+    <meta name="twitter:description" content="Full-stack developer building scalable web apps with Laravel &amp; Symfony. Linux enthusiast.">
+    <meta name="twitter:image" content="https://sumanchaulagain.info.np/content/preview.png">
+    <meta name="theme-color" content="#050805">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="style.css">
+
+    <script src="js/theme-init.js"></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Suman Chaulagain","jobTitle":"Software Engineer","url":"https://sumanchaulagain.info.np","image":"https://sumanchaulagain.info.np/content/preview.png","sameAs":["https://github.com/Schaulagain","https://linkedin.com/in/suman-chaulagain"]}</script>
+    <script type="application/json" id="site-config">{"username":"suman","name":"Suman Chaulagain","role":"Software Engineer","tagline":"Full-stack developer building scalable web apps with Laravel & Symfony. Linux enthusiast.","description":"Suman Chaulagain is a Software Engineer with 3+ years building full-stack web applications with PHP (Laravel, Symfony), JavaScript and Linux.","url":"https://sumanchaulagain.info.np","github":"https://github.com/Schaulagain","linkedin":"https://linkedin.com/in/suman-chaulagain","source":"https://github.com/Schaulagain/portfolio","stack":"PHP · Laravel · Symfony · JavaScript · Python · MySQL · Linux","experience":"3+ years","welcomeMessage":"Welcome to my personal portfolio.","pages":["about","experience","projects","skills","hobbies","contact"]}</script>
 </head>
 
 <body>
-    <canvas id="matrix-rain" class="matrix-rain"></canvas>
+    <a class="skip-link" href="#plain">Skip to content</a>
+    <canvas id="matrix" class="matrix" aria-hidden="true"></canvas>
 
-    <div class="terminal">
-        <div class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="terminal-btn red"></span>
-                <span class="terminal-btn yellow"></span>
-                <span class="terminal-btn green"></span>
+    <!-- Hero: interactive terminal (needs JS; hidden without it) -->
+    <header class="hero" id="top">
+        <div class="terminal" id="terminal-window">
+            <div class="terminal-header">
+                <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="terminal-title">visitor@suman: ~ — zsh</div>
+                <button class="header-btn" type="button" data-cmd="theme next" title="Switch colour theme">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" class="fill"/></svg>
+                    <span class="sr-only">Switch theme</span>
+                </button>
             </div>
-            <div class="terminal-title" id="terminal-title">root@suman:~ — zsh — 80x24</div>
-        </div>
-        <div class="terminal-body" id="terminal">
-            <div class="terminal-output">
-                <div class="command-line">
-                    <span class="prompt">visitor@suman:~$</span>
-                    <span class="command">./start_portfolio.sh</span>
-                </div>
-                <div class="output">
-                    <pre class="ascii-art glow" id="loading-ascii">
-                        .-')                  _   .-')       ('-.          .-') _  
-                       ( OO ).               ( '.( OO )_    ( OO ).-.     ( OO ) ) 
-                      (_)---\_)  ,--. ,--.    ,--.   ,--.)  / . --. / ,--./ ,--,'  
-                      /    _ |   |  | |  |    |   `.'   |   | \-.  \  |   \ |  |\  
-                      \  :` `.   |  | | .-')  |         | .-'-'  |  | |    \|  | ) 
-                       '..`''.)  |  |_|( OO ) |  |'.'|  |  \| |_.'  | |  .     |/  
-                      .-._)   \  |  | | `-' / |  |   |  |   |  .-.  | |  |\    |   
-                      \       / ('  '-'(_.-'  |  |   |  |   |  | |  | |  | \   |   
-                       `-----'    `-----'     `--'   `--'   `--' `--' `--'  `--'   
-                      </pre>
-                    <p id="loading-text" class="glow">> Decrypting user profile...</p>
-                    <div class="construction">
-                        <i class="fas fa-code-branch"></i> SYSTEM STATUS: ACTIVE DEVELOPMENT <i class="fas fa-bug"></i>
-                    </div>
-                    <div class="hacker-grid">
-                        <div class="grid-item">>_ Suman Chaulagain</div>
-                        <div class="grid-item">>_ Full Stack Developer</div>
-                        <div class="grid-item">>_ Linux Enthusiast</div>
-                        <div class="grid-item">>_ Technical Writing</div>
-                    </div>
-                </div>
-            </div>
-            <div class="terminal-input">
-                <span class="prompt glow">visitor@suman:~$</span>
-                <input type="text" class="command-input" id="command-input" autofocus disabled
-                    placeholder="awaiting_input...">
+
+            <nav class="chips" aria-label="Quick commands">
+                <button type="button" data-cmd="about">about</button>
+                <button type="button" data-cmd="experience">experience</button>
+                <button type="button" data-cmd="projects">projects</button>
+                <button type="button" data-cmd="skills">skills</button>
+                <button type="button" data-cmd="contact">contact</button>
+                <button type="button" data-cmd="resume">resume</button>
+                <button type="button" data-cmd="neofetch">neofetch</button>
+                <button type="button" data-cmd="help">help</button>
+            </nav>
+
+            <div class="terminal-body" id="terminal-body">
+                <div id="log" class="log" role="log" aria-live="polite"></div>
+                <form class="prompt-row" id="prompt-form" autocomplete="off">
+                    <label for="cmd" class="prompt">visitor@suman:~$</label>
+                    <input id="cmd" class="cmd" type="text" spellcheck="false" autocapitalize="off"
+                        enterkeyhint="go" aria-label="Terminal command" placeholder="type 'help' and press Enter">
+                </form>
             </div>
         </div>
+
+        <a class="scroll-hint" href="#plain">
+            <span>not a terminal person? scroll for the classic view</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+        </a>
+    </header>
+
+    <!-- Plain view: the same content as regular HTML -->
+    <main class="plain" id="plain">
+        <section class="intro">
+            <p class="kicker"><span>~</span> whoami</p>
+            <h1>Suman Chaulagain</h1>
+            <p class="role">Software Engineer</p>
+            <p class="tagline">Full-stack developer building scalable web apps with Laravel &amp; Symfony. Linux enthusiast.</p>
+            <div class="links">
+                <a class="btn primary" href="resume.pdf" download="Suman Chaulagain - Resume.pdf">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                    Resume
+                </a>
+                <a class="btn" href="https://github.com/Schaulagain" target="_blank" rel="noopener noreferrer me">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    GitHub
+                </a>
+                <a class="btn" href="https://linkedin.com/in/suman-chaulagain" target="_blank" rel="noopener noreferrer me">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    LinkedIn
+                </a>
+                <a class="btn mail" href="#contact" data-mail="bW9jLmxpYW1nQG5pYWdhbHVhaGNtdXM=" data-keep-text>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    Email
+                </a>
+            </div>
+        </section>
+
+        <nav class="section-nav" aria-label="Sections"><a href="#about">about</a><a href="#experience">experience</a><a href="#projects">projects</a><a href="#skills">skills</a><a href="#hobbies">hobbies</a><a href="#contact">contact</a><a href="#top" class="to-terminal">&gt;_ terminal</a></nav>
+
+        <section class="page" id="about" data-page="about" data-desc="Who I am">
+    <p class="kicker"><span>01</span> ~/about.md</p>
+    <div class="page-body md" data-page="about">
+<h2>About Me</h2>
+<p>A results-driven Software Engineer with over 3 years of experience in architecting, developing, and deploying robust, full-stack web applications. Proven expertise in building scalable backend systems with PHP (Laravel, Symfony) and leveraging modern JavaScript for dynamic frontends. Adept at performance optimization, Linux server administration, and designing efficient database schemas. Passionate about applying software engineering principles to solve complex problems and contribute to high-performing technical teams.</p>
+<h3>Education</h3>
+<ul><li><strong>Bachelor of Engineering (Honors) in Computing (Software Engineering)</strong><ul><li>University of Northampton, Northampton, United Kingdom</li><li>Sep 2017- Dec 2020</li></ul></li></ul>
+<h3>Professional Development &amp; Certifications</h3>
+<ul><li><strong>Certificate in Safety, Health and Welfare at Work (2025)</strong><ul><li>National Irish Safety Organization (NISO) &amp; Technological University of the Shannon (TUS), Athlone</li></ul></li></ul>
     </div>
+</section>
+<section class="page" id="experience" data-page="experience" data-desc="Where I have worked">
+    <p class="kicker"><span>02</span> ~/experience.md</p>
+    <div class="page-body md" data-page="experience">
+<h2>Work Experience</h2>
+<h3>Web Application Developer</h3>
+<p><strong>Accessworld Tech Pvt. Ltd, Lalitpur, Nepal</strong>  | <em>Apr 2023-Dec 2024</em></p>
+<ul><li>Engineered and maintained full-stack web applications using PHP (Laravel, Symfony) and JavaScript, significantly improving user experience and code maintainability.</li><li>Designed and launched a multi-tenant SaaS platform for cloud service purchases, resulting in a 30% increase in process automation and user engagement.</li><li>Deployed and optimized Linux-based web servers, enhancing application scalability and achieving a 20% improvement in system uptime.</li><li>Refactored and optimized legacy codebases, which improved overall system performance and reduced application load times by 25%.</li><li>Liaised directly with clients from BFI and educational sectors to gather requirements and deliver customized, high-value solutions.</li></ul>
+<h3>Backend Developer</h3>
+<p><strong>Tech 101 Pvt. Ltd, Kathmandu, Nepal</strong>  | <em>Nov 2021-Apr 2023</em></p>
+<ul><li>Contributed to the development of arkostore.com, a mobile exchange platform, by engineering the backend architecture and core API functionalities using Laravel.</li><li>Developed and maintained backend services for web applications using Core PHP and Laravel, focusing on API performance and system stability.</li><li>Designed and normalized relational database schemas (MySQL), optimizing queries to improve data retrieval performance by 20%.</li><li>Engineered and managed RESTful APIs to facilitate seamless communication between web and mobile clients, reducing integration complexity by 15%.</li><li>Conducted rigorous code reviews, enforcing best practices in security, performance, and code quality.</li></ul>
+<h3>Software Engineer</h3>
+<p><strong>Red Tail Fox Pvt. Ltd, Kathmandu, Nepal</strong>  | <em>Mar 2021-Oct 2021</em></p>
+<ul><li>Played a key role in the development of ramailogames.com by implementing multiple payment gateways and converting the application into a Progressive Web App (PWA).</li><li>Developed custom Python scripts for web scraping and data processing.</li><li>Contributed to the backend development of an e-sports tournament platform and a video streaming service using Laravel and Symfony.</li></ul>
+    </div>
+</section>
+<section class="page" id="projects" data-page="projects" data-desc="Things I have built">
+    <p class="kicker"><span>03</span> ~/projects.md</p>
+    <div class="page-body md" data-page="projects">
+<h2>Featured Projects</h2>
+<h3>Cloud Services &amp; Hosting Automation Portal</h3>
+<ul><li><strong>Technologies:</strong> PHP, Laravel </li><li><strong>Live URL:</strong> <a href="https://portal.awt.cloud" target="_blank" rel="noopener noreferrer">portal.awt.cloud</a> </li><li>Architected a self-service portal for customers to purchase and manage cloud products, including domain registration, cPanel hosting and automated VM provisioning.</li><li>Engineered a centralized payment system with a user-loadable credit wallet, enabling seamless transactions.</li><li>Automated the entire customer lifecycle, from real-time domain availability checks to the automatic provisioning of cloud services upon purchase.</li><li>Implemented a Single Sign-On (SSO) authentication system to provide unified, secure access across the platform.</li></ul>
+<h3>Data Center Visit Management System</h3>
+<ul><li><strong>Technologies:</strong> PHP, Laravel </li><li>Maintained and enhanced a mission-critical system for scheduling and managing secure access to data center facilities.</li><li>Engineered a robust, multi-level approval workflow, reducing manual intervention.</li><li>Executed performance optimizations and critical bug fixes to ensure high system availability and reliability for a 24/7 operational environment.</li></ul>
+    </div>
+</section>
+<section class="page" id="skills" data-page="skills" data-desc="Languages, frameworks &amp; tools">
+    <p class="kicker"><span>04</span> ~/skills.md</p>
+    <div class="page-body md" data-page="skills">
+<h2>Skills</h2>
+<h3>Languages</h3>
+<ul><li>PHP</li><li>JavaScript</li><li>Python</li><li>SQL</li></ul>
+<h3>Frameworks &amp; Libraries</h3>
+<ul><li>Laravel</li><li>Symfony</li><li>Progressive Web Apps (PWA)</li></ul>
+<h3>Databases</h3>
+<ul><li>MySQL</li><li>PostgreSQL</li></ul>
+<h3>Tools &amp; Technologies</h3>
+<ul><li>Linux Server Administration</li><li>RESTful APIs</li><li>Git</li><li>GitHub</li><li>Web Scraping</li><li>Docker</li><li>CI/CD</li><li>Postman</li></ul>
+<h3>Project Management</h3>
+<ul><li>Trello</li><li>ClickUp</li></ul>
+    </div>
+</section>
+<section class="page" id="hobbies" data-page="hobbies" data-desc="Life outside the editor">
+    <p class="kicker"><span>05</span> ~/hobbies.md</p>
+    <div class="page-body md" data-page="hobbies">
+<h2>Hobbies &amp; Interests</h2>
+<h3>Technology</h3>
+<ul><li>Web development</li><li>Home lab experimentation</li><li>CLI tool development</li></ul>
+<h3>Personal</h3>
+<ul><li>Gaming</li><li>Technical reading</li><li>Learning</li></ul>
+<h3>Creative</h3>
+<ul><li>Digital art</li></ul>
+    </div>
+</section>
+<section class="page" id="contact" data-page="contact" data-desc="Get in touch">
+    <p class="kicker"><span>06</span> ~/contact.md</p>
+    <div class="page-body md" data-page="contact">
+<h2>Contact Information</h2>
+<p><strong>Email</strong>: <a class="mail" href="#contact" data-mail="bW9jLmxpYW1nQG5pYWdhbHVhaGNtdXM=">sumchaulagain [at] gmail [dot] com</a></p>
+<p><strong>Social Media</strong>:</p>
+<ul><li><a href="https://github.com/Schaulagain" target="_blank" rel="noopener noreferrer">GitHub</a></li><li><a href="https://linkedin.com/in/suman-chaulagain" target="_blank" rel="noopener noreferrer">LinkedIn</a></li></ul>
+<p>Feel free to reach out for professional opportunities, technical discussions, or open source collaboration.</p>
+    </div>
+</section>
 
-    <script src="script.js" type="module"></script>
-    <script>
-        const canvas = document.getElementById('matrix-rain');
-        const ctx = canvas.getContext('2d');
+        <footer class="footer">
+            <p>© 2026 Suman Chaulagain · built with plain HTML, CSS &amp; JS · <a href="https://github.com/Schaulagain/portfolio" target="_blank" rel="noopener noreferrer">view source</a></p>
+            <p class="muted">psst — the terminal at the top has a few hidden commands.</p>
+        </footer>
+    </main>
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
-        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        const nums = '0123456789';
-        const symbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
-
-        const alphabet = katakana + latin + nums + symbols;
-
-        const fontSize = 16;
-        const columns = canvas.width / fontSize;
-
-        const rainDrops = [];
-
-        for (let x = 0; x < columns; x++) {
-            rainDrops[x] = 1;
-        }
-
-        const draw = () => {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.fillStyle = '#0f0';
-            ctx.font = fontSize + 'px monospace';
-
-            for (let i = 0; i < rainDrops.length; i++) {
-                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
-
-                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    rainDrops[i] = 0;
-                }
-                rainDrops[i]++;
-            }
-        };
-
-        setInterval(draw, 30);
-
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-    </script>
+    <template id="banner-art">  .-')                  _   .-')       ('-.          .-') _
+ ( OO ).               ( '.( OO )_    ( OO ).-.     ( OO ) )
+(_)---\_)  ,--. ,--.    ,--.   ,--.)  / . --. / ,--./ ,--,'
+/    _ |   |  | |  |    |   `.'   |   | \-.  \  |   \ |  |\
+\  :` `.   |  | | .-')  |         | .-'-'  |  | |    \|  | )
+ '..`''.)  |  |_|( OO ) |  |'.'|  |  \| |_.'  | |  .     |/
+.-._)   \  |  | | `-' / |  |   |  |   |  .-.  | |  |\    |
+\       / ('  '-'(_.-'  |  |   |  |   |  | |  | |  | \   |
+ `-----'    `-----'     `--'   `--'   `--' `--' `--'  `--'
+</template>
+    <script type="module" src="js/site.js"></script>
 </body>
 
 </html>
