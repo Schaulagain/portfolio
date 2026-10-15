@@ -24,7 +24,7 @@ const PAGES = [
     ['contact', 'Get in touch'],
 ];
 
-const ASSETS = ['style.css', 'favicon.svg', 'resume.pdf', 'robots.txt', 'content/preview.png', 'js'];
+const ASSETS = ['style.css', 'favicon.svg', 'resume.pdf', 'robots.txt', 'content/preview.png', 'js', 'fonts'];
 
 const escapeHtml = (s) =>
     String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -105,7 +105,7 @@ function serve(port = 8000) {
     const types = {
         '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript',
         '.svg': 'image/svg+xml', '.png': 'image/png', '.pdf': 'application/pdf',
-        '.xml': 'application/xml', '.txt': 'text/plain',
+        '.xml': 'application/xml', '.txt': 'text/plain', '.woff2': 'font/woff2',
     };
     http.createServer(async (req, res) => {
         let file = path.join(dist, decodeURIComponent(new URL(req.url, 'http://x').pathname));
