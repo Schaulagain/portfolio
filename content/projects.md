@@ -19,4 +19,3 @@
 ## Smaller Experiments
 * [laravel-websocket](https://github.com/Schaulagain/laravel-websocket): real-time chat built with Laravel and WebSockets.
 * [Todo-App](https://github.com/Schaulagain/Todo-App): Laravel API back end with a Next.js front end.
-* [NestJs-TypeORM](https://github.com/Schaulagain/NestJs-TypeORM): exploring NestJS and TypeORM with TypeScript.
