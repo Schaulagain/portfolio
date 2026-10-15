@@ -1,17 +1,21 @@
-### Languages
+# Skills
+
+## Languages
 * PHP
 * JavaScript
 * Python
 * SQL
 
-### Frameworks & Libraries
+## Frameworks & Libraries
 * Laravel
+* Symfony
+* Progressive Web Apps (PWA)
 
-### Databases
+## Databases
 * MySQL
 * PostgreSQL
 
-### Tools & Technologies
+## Tools & Technologies
 * Linux Server Administration
 * RESTful APIs
 * Git
@@ -21,6 +25,6 @@
 * CI/CD
 * Postman
 
-### Project Management
+## Project Management
 * Trello
 * ClickUp

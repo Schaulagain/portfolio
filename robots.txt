@@ -1,3 +1,5 @@
 User-agent: *
 Disallow: /resume.pdf
 Allow: /
+
+Sitemap: https://sumanchaulagain.info.np/sitemap.xml
