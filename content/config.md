@@ -1,13 +1,13 @@
 username: suman
 name: Suman Chaulagain
 role: Software Engineer
-tagline: Full-stack developer building scalable web apps with Laravel & Symfony. Linux enthusiast.
-description: Suman Chaulagain is a Software Engineer with 3+ years building full-stack web applications with PHP (Laravel, Symfony), JavaScript and Linux.
+tagline: Backend-focused engineer building Laravel apps, payment systems and Linux infrastructure. Based in Kathmandu, open to remote work and relocation.
+description: Suman Chaulagain is a backend-focused Software Engineer with almost 4 years building Laravel and Symfony applications, payment integrations and Linux infrastructure.
 url: https://sumanchaulagain.info.np
 email: sumchaulagain@gmail.com
 github: https://github.com/Schaulagain
 linkedin: https://linkedin.com/in/suman-chaulagain
 source: https://github.com/Schaulagain/portfolio
 stack: PHP · Laravel · Symfony · JavaScript · Python · MySQL · Linux
-experience: 3+ years
+experience: almost 4 years
 welcomeMessage: Welcome to my personal portfolio.

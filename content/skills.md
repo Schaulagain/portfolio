@@ -1,30 +1,39 @@
 # Skills
 
-## Languages
+## Backend
 * PHP
-* JavaScript
-* Python
-* SQL
-
-## Frameworks & Libraries
 * Laravel
 * Symfony
-* Progressive Web Apps (PWA)
+* Livewire
+* REST APIs
+* Payment gateways (eSewa, HBL, IME Pay)
+
+## Frontend
+* JavaScript
+* jQuery
+* Livewire
+* HTML
+* CSS
 
 ## Databases
 * MySQL
 * PostgreSQL
 
-## Tools & Technologies
-* Linux Server Administration
-* RESTful APIs
-* Git
-* GitHub
-* Web Scraping
+## Infrastructure
+* Linux (Ubuntu Server)
+* Nginx
+* Apache
 * Docker
-* CI/CD
-* Postman
+* Portainer
+* Tailscale
+* GitHub Actions
+* VMware vSphere API
+* cPanel/WHM API
 
-## Project Management
-* Trello
+## Also
+* Python
+* TypeScript
+* Git
+* Postman
+* Jira
 * ClickUp
