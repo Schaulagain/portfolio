@@ -8,6 +8,6 @@ Based in **Kathmandu, Nepal**, and open to remote work and relocation.
 
 ## Education
 
-* **BEng (Hons) Computing (Software Engineering)**
+* **BSc (Hons) Computing (Software Engineering)**
     * University of Northampton, Northampton, United Kingdom
     * Sep 2017 – Dec 2020
