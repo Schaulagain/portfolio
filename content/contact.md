@@ -6,4 +6,4 @@
 - [GitHub](https://github.com/Schaulagain)
 - [LinkedIn](https://linkedin.com/in/suman-chaulagain)
 
-Feel free to reach out for professional opportunities, technical discussions, or open source collaboration.
+Email is the best way to reach me. I'm happy to talk about jobs or anything on this site.

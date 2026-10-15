@@ -2,13 +2,12 @@
 
 ## Technology
 - Web development
-- Home lab experimentation
-- CLI tool development
+- Tinkering with my home server
+- Command-line tools
 
 ## Personal
 - Gaming
-- Technical reading
-- Learning
+- Reading about tech
 
 ## Creative
 - Digital art
