@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <title>{{name}} — {{role}}</title>
+    <title>{{name}} | {{role}}</title>
     <meta name="description" content="{{description}}">
     <meta name="author" content="{{name}}">
     <link rel="canonical" href="{{url}}/">
@@ -15,14 +15,14 @@
     <meta property="og:type" content="profile">
     <meta property="og:site_name" content="{{name}}">
     <meta property="og:url" content="{{url}}/">
-    <meta property="og:title" content="{{name}} — {{role}}">
+    <meta property="og:title" content="{{name}} | {{role}}">
     <meta property="og:description" content="{{tagline}}">
     <meta property="og:image" content="{{url}}/content/preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="A terminal window showing {{name}}'s portfolio">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{name}} — {{role}}">
+    <meta name="twitter:title" content="{{name}} | {{role}}">
     <meta name="twitter:description" content="{{tagline}}">
     <meta name="twitter:image" content="{{url}}/content/preview.png">
     <meta name="theme-color" content="#050805">
@@ -46,7 +46,7 @@
         <div class="terminal" id="terminal-window">
             <div class="terminal-header">
                 <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                <div class="terminal-title">visitor@{{username}}: ~ — zsh</div>
+                <div class="terminal-title">visitor@{{username}}: ~</div>
                 <button class="header-btn" type="button" data-cmd="theme next" title="Switch colour theme">
                     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" class="fill"/></svg>
                     <span class="sr-only">Switch theme</span>
