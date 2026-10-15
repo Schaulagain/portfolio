@@ -102,7 +102,7 @@ class Terminal {
             this.run(value);
         });
         this.input.addEventListener('keydown', (e) => this.onKey(e));
-        this.body.addEventListener('click', (e) => {
+        $('#terminal-window').addEventListener('click', (e) => {
             if (e.target.closest('a, button') || getSelection().toString()) return;
             this.input.focus({ preventScroll: true });
         });

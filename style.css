@@ -1,3 +1,21 @@
+/* ---------- fonts (self-hosted, latin subset, variable weight 400–700) ---------- */
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("fonts/inter-latin.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("fonts/jetbrains-mono-latin.woff2") format("woff2");
+}
+
 /* ---------- themes ---------- */
 
 :root,
@@ -344,6 +362,8 @@ html:not(.js) .hero {
     align-items: center;
     gap: 10px;
     margin: 0;
+    padding: 12px 18px;
+    border-top: 1px solid var(--border);
 }
 
 .prompt {
@@ -872,6 +892,10 @@ html:not(.js) .to-terminal {
 
     .terminal-body {
         padding: 12px;
+    }
+
+    .prompt-row {
+        padding: 10px 12px;
     }
 
     .terminal-header .dots {

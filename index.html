@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <title>Suman Chaulagain — Software Engineer</title>
-    <meta name="description" content="Suman Chaulagain is a Software Engineer with 3+ years building full-stack web applications with PHP (Laravel, Symfony), JavaScript and Linux.">
+    <meta name="description" content="Suman Chaulagain is a backend-focused Software Engineer with almost 4 years building Laravel and Symfony applications, payment integrations and Linux infrastructure.">
     <meta name="author" content="Suman Chaulagain">
     <link rel="canonical" href="https://sumanchaulagain.info.np/">
 
@@ -16,26 +16,25 @@
     <meta property="og:site_name" content="Suman Chaulagain">
     <meta property="og:url" content="https://sumanchaulagain.info.np/">
     <meta property="og:title" content="Suman Chaulagain — Software Engineer">
-    <meta property="og:description" content="Full-stack developer building scalable web apps with Laravel &amp; Symfony. Linux enthusiast.">
+    <meta property="og:description" content="Backend-focused engineer building Laravel apps, payment systems and Linux infrastructure. Based in Kathmandu, open to remote work and relocation.">
     <meta property="og:image" content="https://sumanchaulagain.info.np/content/preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="A terminal window showing Suman Chaulagain's portfolio">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Suman Chaulagain — Software Engineer">
-    <meta name="twitter:description" content="Full-stack developer building scalable web apps with Laravel &amp; Symfony. Linux enthusiast.">
+    <meta name="twitter:description" content="Backend-focused engineer building Laravel apps, payment systems and Linux infrastructure. Based in Kathmandu, open to remote work and relocation.">
     <meta name="twitter:image" content="https://sumanchaulagain.info.np/content/preview.png">
     <meta name="theme-color" content="#050805">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+    <link rel="preload" href="fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="style.css">
 
     <script src="js/theme-init.js"></script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Suman Chaulagain","jobTitle":"Software Engineer","url":"https://sumanchaulagain.info.np","image":"https://sumanchaulagain.info.np/content/preview.png","sameAs":["https://github.com/Schaulagain","https://linkedin.com/in/suman-chaulagain"]}</script>
-    <script type="application/json" id="site-config">{"username":"suman","name":"Suman Chaulagain","role":"Software Engineer","tagline":"Full-stack developer building scalable web apps with Laravel & Symfony. Linux enthusiast.","description":"Suman Chaulagain is a Software Engineer with 3+ years building full-stack web applications with PHP (Laravel, Symfony), JavaScript and Linux.","url":"https://sumanchaulagain.info.np","github":"https://github.com/Schaulagain","linkedin":"https://linkedin.com/in/suman-chaulagain","source":"https://github.com/Schaulagain/portfolio","stack":"PHP · Laravel · Symfony · JavaScript · Python · MySQL · Linux","experience":"3+ years","welcomeMessage":"Welcome to my personal portfolio.","pages":["about","experience","projects","skills","hobbies","contact"]}</script>
+    <script type="application/json" id="site-config">{"username":"suman","name":"Suman Chaulagain","role":"Software Engineer","tagline":"Backend-focused engineer building Laravel apps, payment systems and Linux infrastructure. Based in Kathmandu, open to remote work and relocation.","description":"Suman Chaulagain is a backend-focused Software Engineer with almost 4 years building Laravel and Symfony applications, payment integrations and Linux infrastructure.","url":"https://sumanchaulagain.info.np","github":"https://github.com/Schaulagain","linkedin":"https://linkedin.com/in/suman-chaulagain","source":"https://github.com/Schaulagain/portfolio","stack":"PHP · Laravel · Symfony · JavaScript · Python · MySQL · Linux","experience":"almost 4 years","welcomeMessage":"Welcome to my personal portfolio.","pages":["about","experience","projects","skills","hobbies","contact"]}</script>
 </head>
 
 <body>
@@ -67,12 +66,12 @@
 
             <div class="terminal-body" id="terminal-body">
                 <div id="log" class="log" role="log" aria-live="polite"></div>
-                <form class="prompt-row" id="prompt-form" autocomplete="off">
-                    <label for="cmd" class="prompt">visitor@suman:~$</label>
-                    <input id="cmd" class="cmd" type="text" spellcheck="false" autocapitalize="off"
-                        enterkeyhint="go" aria-label="Terminal command" placeholder="type 'help' and press Enter">
-                </form>
             </div>
+            <form class="prompt-row" id="prompt-form" autocomplete="off">
+                <label for="cmd" class="prompt">visitor@suman:~$</label>
+                <input id="cmd" class="cmd" type="text" spellcheck="false" autocapitalize="off"
+                    enterkeyhint="go" aria-label="Terminal command" placeholder="type 'help' and press Enter">
+            </form>
         </div>
 
         <a class="scroll-hint" href="#plain">
@@ -87,7 +86,7 @@
             <p class="kicker"><span>~</span> whoami</p>
             <h1>Suman Chaulagain</h1>
             <p class="role">Software Engineer</p>
-            <p class="tagline">Full-stack developer building scalable web apps with Laravel &amp; Symfony. Linux enthusiast.</p>
+            <p class="tagline">Backend-focused engineer building Laravel apps, payment systems and Linux infrastructure. Based in Kathmandu, open to remote work and relocation.</p>
             <div class="links">
                 <a class="btn primary" href="resume.pdf" download="Suman Chaulagain - Resume.pdf">
                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
@@ -114,52 +113,62 @@
     <p class="kicker"><span>01</span> ~/about.md</p>
     <div class="page-body md" data-page="about">
 <h2>About Me</h2>
-<p>A results-driven Software Engineer with over 3 years of experience in architecting, developing, and deploying robust, full-stack web applications. Proven expertise in building scalable backend systems with PHP (Laravel, Symfony) and leveraging modern JavaScript for dynamic frontends. Adept at performance optimization, Linux server administration, and designing efficient database schemas. Passionate about applying software engineering principles to solve complex problems and contribute to high-performing technical teams.</p>
+<p>Backend-focused software engineer with almost 4 years of experience building production Laravel and Symfony applications. Most recently I owned the payment system behind a cloud-services self-service portal, integrating eSewa and HBL and handling every purchase made on the platform.</p>
+<p>I'm comfortable across the stack, from Livewire and jQuery front ends to Nginx and Apache configuration and Linux servers, and I'm building my DevOps skills through a self-hosted Docker homelab.</p>
+<p>Based in <strong>Kathmandu, Nepal</strong>, and open to remote work and relocation.</p>
 <h3>Education</h3>
-<ul><li><strong>Bachelor of Engineering (Honors) in Computing (Software Engineering)</strong><ul><li>University of Northampton, Northampton, United Kingdom</li><li>Sep 2017- Dec 2020</li></ul></li></ul>
-<h3>Professional Development &amp; Certifications</h3>
-<ul><li><strong>Certificate in Safety, Health and Welfare at Work (2025)</strong><ul><li>National Irish Safety Organization (NISO) &amp; Technological University of the Shannon (TUS), Athlone</li></ul></li></ul>
+<ul><li><strong>BEng (Hons) Computing (Software Engineering)</strong><ul><li>University of Northampton, Northampton, United Kingdom</li><li>Sep 2017 – Dec 2020</li></ul></li></ul>
     </div>
 </section>
 <section class="page" id="experience" data-page="experience" data-desc="Where I have worked">
     <p class="kicker"><span>02</span> ~/experience.md</p>
     <div class="page-body md" data-page="experience">
 <h2>Work Experience</h2>
+<h3>Career Break: International Relocation</h3>
+<p><em>Jan 2025 – Present</em></p>
+<ul><li>Built a self-hosted Docker homelab and rebuilt this portfolio site with a CI deployment pipeline (see <code>projects</code>).</li></ul>
 <h3>Web Application Developer</h3>
-<p><strong>Accessworld Tech Pvt. Ltd, Lalitpur, Nepal</strong>  | <em>Apr 2023-Dec 2024</em></p>
-<ul><li>Engineered and maintained full-stack web applications using PHP (Laravel, Symfony) and JavaScript, significantly improving user experience and code maintainability.</li><li>Designed and launched a multi-tenant SaaS platform for cloud service purchases, resulting in a 30% increase in process automation and user engagement.</li><li>Deployed and optimized Linux-based web servers, enhancing application scalability and achieving a 20% improvement in system uptime.</li><li>Refactored and optimized legacy codebases, which improved overall system performance and reduced application load times by 25%.</li><li>Liaised directly with clients from BFI and educational sectors to gather requirements and deliver customized, high-value solutions.</li></ul>
+<p><strong>Accessworld Tech Pvt. Ltd, Lalitpur, Nepal</strong> | <em>Apr 2023 – Dec 2024</em></p>
+<ul><li>Owned the <strong>payment service</strong> of a cloud self-service portal as one of a two-person backend team; every purchase on the platform (VPS, domains, endpoints, email) went through it.</li><li>Integrated the <strong>eSewa</strong> and <strong>HBL</strong> payment gateways, handling transaction recording, gateway callbacks, payment verification and invoice generation.</li><li>Designed and prototyped a reward-points system that let customers spend points on portal products.</li><li>Built Laravel integrations with the <strong>VMware vSphere API</strong> to provision and modify customer VMs and show live VM stats on user dashboards.</li><li>Automated hosting, email and domain products through the <strong>cPanel/WHM API</strong>, email provider APIs and domain availability and pricing APIs.</li><li>Added a multi-level approval workflow to a 24/7 data center visit management system.</li><li>Deployed applications on Linux servers (Nginx, Apache) and gathered requirements directly from banking and education sector clients.</li></ul>
 <h3>Backend Developer</h3>
-<p><strong>Tech 101 Pvt. Ltd, Kathmandu, Nepal</strong>  | <em>Nov 2021-Apr 2023</em></p>
-<ul><li>Contributed to the development of arkostore.com, a mobile exchange platform, by engineering the backend architecture and core API functionalities using Laravel.</li><li>Developed and maintained backend services for web applications using Core PHP and Laravel, focusing on API performance and system stability.</li><li>Designed and normalized relational database schemas (MySQL), optimizing queries to improve data retrieval performance by 20%.</li><li>Engineered and managed RESTful APIs to facilitate seamless communication between web and mobile clients, reducing integration complexity by 15%.</li><li>Conducted rigorous code reviews, enforcing best practices in security, performance, and code quality.</li></ul>
+<p><strong>Tech 101 Pvt. Ltd, Kathmandu, Nepal</strong> | <em>Nov 2021 – Apr 2023</em></p>
+<ul><li>Developed and maintained backend services and REST APIs in Core PHP and Laravel for web and mobile clients.</li><li>Built report generation and phone-selection logic for the admin portal of arkostore.com, a mobile phone exchange platform.</li><li>Designed and normalised MySQL schemas, optimised slow queries and took part in code reviews.</li></ul>
 <h3>Software Engineer</h3>
-<p><strong>Red Tail Fox Pvt. Ltd, Kathmandu, Nepal</strong>  | <em>Mar 2021-Oct 2021</em></p>
-<ul><li>Played a key role in the development of ramailogames.com by implementing multiple payment gateways and converting the application into a Progressive Web App (PWA).</li><li>Developed custom Python scripts for web scraping and data processing.</li><li>Contributed to the backend development of an e-sports tournament platform and a video streaming service using Laravel and Symfony.</li></ul>
+<p><strong>Red Tail Fox Pvt. Ltd, Kathmandu, Nepal</strong> | <em>Mar 2021 – Oct 2021</em></p>
+<ul><li>Integrated the <strong>eSewa</strong> and <strong>IME Pay</strong> payment gateways into ramailogames.com, an online gaming platform, and turned it into a Progressive Web App.</li><li>Contributed to the backends of an e-sports tournament platform and a video streaming service (Laravel, Symfony).</li><li>Wrote Python scripts for web scraping and data processing, and designed database models (ERDs) for new systems.</li></ul>
     </div>
 </section>
 <section class="page" id="projects" data-page="projects" data-desc="Things I have built">
     <p class="kicker"><span>03</span> ~/projects.md</p>
     <div class="page-body md" data-page="projects">
-<h2>Featured Projects</h2>
-<h3>Cloud Services &amp; Hosting Automation Portal</h3>
-<ul><li><strong>Technologies:</strong> PHP, Laravel </li><li><strong>Live URL:</strong> <a href="https://portal.awt.cloud" target="_blank" rel="noopener noreferrer">portal.awt.cloud</a> </li><li>Architected a self-service portal for customers to purchase and manage cloud products, including domain registration, cPanel hosting and automated VM provisioning.</li><li>Engineered a centralized payment system with a user-loadable credit wallet, enabling seamless transactions.</li><li>Automated the entire customer lifecycle, from real-time domain availability checks to the automatic provisioning of cloud services upon purchase.</li><li>Implemented a Single Sign-On (SSO) authentication system to provide unified, secure access across the platform.</li></ul>
-<h3>Data Center Visit Management System</h3>
-<ul><li><strong>Technologies:</strong> PHP, Laravel </li><li>Maintained and enhanced a mission-critical system for scheduling and managing secure access to data center facilities.</li><li>Engineered a robust, multi-level approval workflow, reducing manual intervention.</li><li>Executed performance optimizations and critical bug fixes to ensure high system availability and reliability for a 24/7 operational environment.</li></ul>
+<h2>Projects</h2>
+<h3>Homelab</h3>
+<p><strong>Ubuntu Server 24.04 · Docker · Portainer · Pi-hole · Jellyfin · Tailscale</strong> | <a href="https://github.com/Schaulagain/my-homelab" target="_blank" rel="noopener noreferrer">github.com/Schaulagain/my-homelab</a></p>
+<ul><li>Turned an old laptop into a headless Ubuntu server running Pi-hole (network-wide ad blocking), Jellyfin and Portainer in Docker.</li><li>Reachable remotely over a Tailscale VPN, without opening any router ports.</li><li>Setup steps and troubleshooting notes are documented in the repository.</li></ul>
+<h3>This Portfolio</h3>
+<p><strong>Node.js · JavaScript · GitHub Actions · Cloudflare</strong> | <a href="https://github.com/Schaulagain/portfolio" target="_blank" rel="noopener noreferrer">source</a></p>
+<ul><li>Terminal-style portfolio with a dependency-free Node.js build that renders Markdown into static HTML, so the content works for search engines and visitors without JavaScript.</li><li>Deployed by GitHub Actions to GitHub Pages behind Cloudflare, with a strict Content-Security-Policy and self-hosted fonts.</li></ul>
+<h3>Cloud Self-Service Portal (Accessworld Tech)</h3>
+<p><strong>PHP · Laravel · vSphere API · cPanel/WHM API · eSewa · HBL</strong> | <a href="https://portal.awt.cloud" target="_blank" rel="noopener noreferrer">portal.awt.cloud</a></p>
+<ul><li>Customers buy and manage VPS, domains, hosting and email in one place; I owned the payment service every purchase went through.</li><li>VM provisioning and live stats through the vSphere API, plus automated cPanel, email and domain products.</li></ul>
+<h3>Smaller Experiments</h3>
+<ul><li><a href="https://github.com/Schaulagain/laravel-websocket" target="_blank" rel="noopener noreferrer">laravel-websocket</a>: real-time chat built with Laravel and WebSockets.</li><li><a href="https://github.com/Schaulagain/Todo-App" target="_blank" rel="noopener noreferrer">Todo-App</a>: Laravel API back end with a Next.js front end.</li><li><a href="https://github.com/Schaulagain/NestJs-TypeORM" target="_blank" rel="noopener noreferrer">NestJs-TypeORM</a>: exploring NestJS and TypeORM with TypeScript.</li></ul>
     </div>
 </section>
 <section class="page" id="skills" data-page="skills" data-desc="Languages, frameworks &amp; tools">
     <p class="kicker"><span>04</span> ~/skills.md</p>
     <div class="page-body md" data-page="skills">
 <h2>Skills</h2>
-<h3>Languages</h3>
-<ul><li>PHP</li><li>JavaScript</li><li>Python</li><li>SQL</li></ul>
-<h3>Frameworks &amp; Libraries</h3>
-<ul><li>Laravel</li><li>Symfony</li><li>Progressive Web Apps (PWA)</li></ul>
+<h3>Backend</h3>
+<ul><li>PHP</li><li>Laravel</li><li>Symfony</li><li>Livewire</li><li>REST APIs</li><li>Payment gateways (eSewa, HBL, IME Pay)</li></ul>
+<h3>Frontend</h3>
+<ul><li>JavaScript</li><li>jQuery</li><li>Livewire</li><li>HTML</li><li>CSS</li></ul>
 <h3>Databases</h3>
 <ul><li>MySQL</li><li>PostgreSQL</li></ul>
-<h3>Tools &amp; Technologies</h3>
-<ul><li>Linux Server Administration</li><li>RESTful APIs</li><li>Git</li><li>GitHub</li><li>Web Scraping</li><li>Docker</li><li>CI/CD</li><li>Postman</li></ul>
-<h3>Project Management</h3>
-<ul><li>Trello</li><li>ClickUp</li></ul>
+<h3>Infrastructure</h3>
+<ul><li>Linux (Ubuntu Server)</li><li>Nginx</li><li>Apache</li><li>Docker</li><li>Portainer</li><li>Tailscale</li><li>GitHub Actions</li><li>VMware vSphere API</li><li>cPanel/WHM API</li></ul>
+<h3>Also</h3>
+<ul><li>Python</li><li>TypeScript</li><li>Git</li><li>Postman</li><li>Jira</li><li>ClickUp</li></ul>
     </div>
 </section>
 <section class="page" id="hobbies" data-page="hobbies" data-desc="Life outside the editor">
