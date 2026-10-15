@@ -285,7 +285,7 @@ function bootLines() {
     return [
         `<div class="muted">[    0.000000] sumanOS ${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')} booting on ${esc(location.hostname || 'localhost')}</div>`,
         ok(`Mounted <b>/home/${esc(config.username)}</b>`),
-        ok('Started <b>php-fpm.service</b> — Laravel &amp; Symfony runtime'),
+        ok('Started <b>php-fpm.service</b>'),
         ok('Started <b>mysql.service</b>'),
         ok('Started <b>coffee.service</b>'),
         ok(`Loaded <b>${config.pages.length}</b> content modules`),
@@ -296,7 +296,7 @@ function bootLines() {
 function welcome() {
     const art = $('#banner-art')?.content.textContent ?? '';
     return `<pre class="banner" aria-label="${esc(config.name)}">${esc(art)}</pre>
-        <p>Hi, I'm <strong class="accent">${esc(config.name)}</strong> — ${esc(config.role)}. ${esc(config.welcomeMessage || '')}</p>
+        <p>Hi, I'm <strong class="accent">${esc(config.name)}</strong>, ${esc(config.role.toLowerCase())}. ${esc(config.welcomeMessage || '')}</p>
         <p class="muted">Type ${cmdLink('help')} or try ${cmdLink('about')}, ${cmdLink('projects')}, ${cmdLink('neofetch')}.
         <span class="desktop-only">Tab completes, ↑/↓ browse history.</span></p>`;
 }
@@ -323,7 +323,7 @@ function neofetch() {
         ['Uptime', `${config.experience} of professional experience`],
         ['Stack', config.stack],
         ['Host', location.hostname || 'localhost'],
-        ['Shell', 'zsh — portfolio edition'],
+        ['Shell', 'zsh'],
         ['Theme', currentTheme()],
         ['Resolution', `${window.innerWidth}x${window.innerHeight}`],
     ];
@@ -398,7 +398,7 @@ function createCommands(term) {
             className: 'md',
             long: true,
             run([file]) {
-                if (!file) return `<span class="error">usage: cat &lt;file&gt;</span> — try ${cmdLink('ls')}`;
+                if (!file) return `<span class="error">usage: cat &lt;file&gt;</span>. Try ${cmdLink('ls')}`;
                 const name = file.replace(/^(\.\/|~\/)/, '');
                 if (name === 'resume.pdf') return `cat: resume.pdf: binary file. Try ${cmdLink('resume')} instead.`;
                 const page = name.replace(/\.md$/, '');
@@ -451,7 +451,7 @@ function createCommands(term) {
         },
 
         // Hidden extras
-        whoami: { hidden: true, run: () => `visitor — hopefully a future colleague 👋<br>This machine belongs to <b>${esc(config.name)}</b>. Run ${cmdLink('about')} to learn more.` },
+        whoami: { hidden: true, run: () => `visitor<br>This machine belongs to <b>${esc(config.name)}</b>. Run ${cmdLink('about')} to learn more.` },
         pwd: { hidden: true, run: () => '/home/visitor' },
         date: { hidden: true, run: () => esc(new Date().toString()) },
         echo: { hidden: true, run: (_, raw) => esc(raw.replace(/^echo\s*/i, '')) },
@@ -467,22 +467,22 @@ function createCommands(term) {
                 return '<span class="error">visitor is not in the sudoers file. This incident will be reported.</span> 🚨';
             },
         },
-        rm: { hidden: true, run: () => `rm: cannot remove: read-only file system. Nice try though 😏 — my inbox is writable: ${cmdLink('email')}` },
-        vim: { hidden: true, run: () => 'Entering vim… just kidding. Nobody has ever left. Try <kbd>:q</kbd> — or ' + cmdLink('help') },
+        rm: { hidden: true, run: () => `rm: cannot remove: read-only file system. My inbox isn't, though: ${cmdLink('email')}` },
+        vim: { hidden: true, run: () => 'Entering vim… just kidding. Nobody has ever left. Try <kbd>:q</kbd>, or ' + cmdLink('help') },
         coffee: { hidden: true, run: () => '<pre>   ( (\n    ) )\n  ........\n  |      |]\n  \\      /\n   `----\'</pre>Error 418: I\'m a teapot. ☕' },
-        ping: { hidden: true, run: () => `PONG — I usually reply within a day. ${cmdLink('email')}` },
-        hello: { hidden: true, run: () => `Hey there! 👋 Glad you stopped by. Try ${cmdLink('about')}.` },
+        ping: { hidden: true, run: () => `pong. I usually reply to email within a day: ${cmdLink('email')}` },
+        hello: { hidden: true, run: () => `Hi! Try ${cmdLink('about')} to start.` },
         hire: {
             hidden: true,
             async run() {
-                term.print('Initiating recruitment protocol…');
+                term.print('Checking...');
                 for (const label of ['backend', 'frontend', 'linux', 'teamwork']) {
                     const bar = progressBar(label, '100% ✓');
                     term.print(bar);
                     term.scrollToEnd();
                     await bar.play(450);
                 }
-                return `<span class="ok">✓ Match found.</span> Great choice — let's talk: ${cmdLink('email')} · ${cmdLink('social')} · ${cmdLink('resume')}`;
+                return `<span class="ok">✓ Looks like a match.</span> Get in touch: ${cmdLink('email')} · ${cmdLink('social')} · ${cmdLink('resume')}`;
             },
         },
     });
