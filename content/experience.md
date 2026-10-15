@@ -1,23 +1,27 @@
 # Work Experience
 
+## Career Break: International Relocation
+*Jan 2025 – Present*
+* Built a self-hosted Docker homelab and rebuilt this portfolio site with a CI deployment pipeline (see `projects`).
+
 ## Web Application Developer
-**Accessworld Tech Pvt. Ltd, Lalitpur, Nepal**  | *Apr 2023-Dec 2024*
-* Engineered and maintained full-stack web applications using PHP (Laravel, Symfony) and JavaScript, significantly improving user experience and code maintainability.
-* Designed and launched a multi-tenant SaaS platform for cloud service purchases, resulting in a 30% increase in process automation and user engagement.
-* Deployed and optimized Linux-based web servers, enhancing application scalability and achieving a 20% improvement in system uptime.
-* Refactored and optimized legacy codebases, which improved overall system performance and reduced application load times by 25%.
-* Liaised directly with clients from BFI and educational sectors to gather requirements and deliver customized, high-value solutions.
+**Accessworld Tech Pvt. Ltd, Lalitpur, Nepal** | *Apr 2023 – Dec 2024*
+* Owned the **payment service** of a cloud self-service portal as one of a two-person backend team; every purchase on the platform (VPS, domains, endpoints, email) went through it.
+* Integrated the **eSewa** and **HBL** payment gateways, handling transaction recording, gateway callbacks, payment verification and invoice generation.
+* Designed and prototyped a reward-points system that let customers spend points on portal products.
+* Built Laravel integrations with the **VMware vSphere API** to provision and modify customer VMs and show live VM stats on user dashboards.
+* Automated hosting, email and domain products through the **cPanel/WHM API**, email provider APIs and domain availability and pricing APIs.
+* Added a multi-level approval workflow to a 24/7 data center visit management system.
+* Deployed applications on Linux servers (Nginx, Apache) and gathered requirements directly from banking and education sector clients.
 
 ## Backend Developer
-**Tech 101 Pvt. Ltd, Kathmandu, Nepal**  | *Nov 2021-Apr 2023* 
-* Contributed to the development of arkostore.com, a mobile exchange platform, by engineering the backend architecture and core API functionalities using Laravel.
-* Developed and maintained backend services for web applications using Core PHP and Laravel, focusing on API performance and system stability.
-* Designed and normalized relational database schemas (MySQL), optimizing queries to improve data retrieval performance by 20%.
-* Engineered and managed RESTful APIs to facilitate seamless communication between web and mobile clients, reducing integration complexity by 15%.
-* Conducted rigorous code reviews, enforcing best practices in security, performance, and code quality.
+**Tech 101 Pvt. Ltd, Kathmandu, Nepal** | *Nov 2021 – Apr 2023*
+* Developed and maintained backend services and REST APIs in Core PHP and Laravel for web and mobile clients.
+* Built report generation and phone-selection logic for the admin portal of arkostore.com, a mobile phone exchange platform.
+* Designed and normalised MySQL schemas, optimised slow queries and took part in code reviews.
 
 ## Software Engineer
-**Red Tail Fox Pvt. Ltd, Kathmandu, Nepal**  | *Mar 2021-Oct 2021* 
-* Played a key role in the development of ramailogames.com by implementing multiple payment gateways and converting the application into a Progressive Web App (PWA).
-* Developed custom Python scripts for web scraping and data processing.
-* Contributed to the backend development of an e-sports tournament platform and a video streaming service using Laravel and Symfony.
+**Red Tail Fox Pvt. Ltd, Kathmandu, Nepal** | *Mar 2021 – Oct 2021*
+* Integrated the **eSewa** and **IME Pay** payment gateways into ramailogames.com, an online gaming platform, and turned it into a Progressive Web App.
+* Contributed to the backends of an e-sports tournament platform and a video streaming service (Laravel, Symfony).
+* Wrote Python scripts for web scraping and data processing, and designed database models (ERDs) for new systems.
