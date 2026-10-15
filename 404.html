@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="matrix">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>404 — {{name}}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/js/theme-init.js"></script>
+</head>
+
+<body class="not-found">
+    <main class="terminal">
+        <div class="terminal-header">
+            <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="terminal-title">visitor@{{username}}: ~ — zsh</div>
+        </div>
+        <div class="terminal-body">
+            <div class="line"><span class="prompt">visitor@{{username}}:~$</span> <span class="typed">cd ./that-page</span></div>
+            <div class="output error">zsh: 404: no such file or directory</div>
+            <div class="output">
+                <pre class="banner">
+ _  _    ___   _  _
+| || |  / _ \ | || |
+| || |_| | | || || |_
+|__   _| |_| ||__   _|
+   |_|  \___/    |_|</pre>
+                <p>This page wandered off. Let's get you back home.</p>
+                <p><a class="btn primary" href="/">cd ~</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
