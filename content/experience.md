@@ -2,26 +2,26 @@
 
 ## Career Break: International Relocation
 *Jan 2025 – Present*
-* Built a self-hosted Docker homelab and rebuilt this portfolio site with a CI deployment pipeline (see `projects`).
+* Set up a Docker server at home and rebuilt this site, which now deploys automatically from GitHub (see `projects`).
 
 ## Web Application Developer
 **Accessworld Tech Pvt. Ltd, Lalitpur, Nepal** | *Apr 2023 – Dec 2024*
-* Owned the **payment service** of a cloud self-service portal as one of a two-person backend team; every purchase on the platform (VPS, domains, endpoints, email) went through it.
-* Integrated the **eSewa** and **HBL** payment gateways, handling transaction recording, gateway callbacks, payment verification and invoice generation.
-* Designed and prototyped a reward-points system that let customers spend points on portal products.
-* Built Laravel integrations with the **VMware vSphere API** to provision and modify customer VMs and show live VM stats on user dashboards.
-* Automated hosting, email and domain products through the **cPanel/WHM API**, email provider APIs and domain availability and pricing APIs.
+* Looked after the **payment service** of a cloud self-service portal. We were two backend developers, and every purchase on the platform (VPS, domains, endpoints, email) went through it.
+* Integrated **eSewa** and **HBL**: recording transactions, handling the gateway callbacks, verifying payments and generating invoices.
+* Designed and built a prototype of a reward-points system where customers could spend points on portal products.
+* Used the **VMware vSphere API** from Laravel to create and change customer VMs and show live VM stats on their dashboards.
+* Automated hosting, email and domain products with the **cPanel/WHM API**, email provider APIs and domain availability and pricing APIs.
 * Added a multi-level approval workflow to a 24/7 data center visit management system.
-* Deployed applications on Linux servers (Nginx, Apache) and gathered requirements directly from banking and education sector clients.
+* Deployed apps to Linux servers (Nginx, Apache) and gathered requirements directly from banking and education clients.
 
 ## Backend Developer
 **Tech 101 Pvt. Ltd, Kathmandu, Nepal** | *Nov 2021 – Apr 2023*
-* Developed and maintained backend services and REST APIs in Core PHP and Laravel for web and mobile clients.
+* Built and maintained REST APIs in plain PHP and Laravel for web and mobile apps.
 * Built report generation and phone-selection logic for the admin portal of arkostore.com, a mobile phone exchange platform.
-* Designed and normalised MySQL schemas, optimised slow queries and took part in code reviews.
+* Designed MySQL schemas, sped up slow queries and reviewed code.
 
 ## Software Engineer
 **Red Tail Fox Pvt. Ltd, Kathmandu, Nepal** | *Mar 2021 – Oct 2021*
-* Integrated the **eSewa** and **IME Pay** payment gateways into ramailogames.com, an online gaming platform, and turned it into a Progressive Web App.
-* Contributed to the backends of an e-sports tournament platform and a video streaming service (Laravel, Symfony).
-* Wrote Python scripts for web scraping and data processing, and designed database models (ERDs) for new systems.
+* Added **eSewa** and **IME Pay** payments to ramailogames.com, an online gaming site, and turned it into a Progressive Web App.
+* Worked on the backends of an e-sports tournament site and a video streaming service (Laravel, Symfony).
+* Wrote Python scripts for web scraping and data processing, and drew up database designs (ERDs) for new systems.

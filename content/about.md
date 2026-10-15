@@ -1,10 +1,10 @@
 # About Me
 
-Backend-focused software engineer with almost 4 years of experience building production Laravel and Symfony applications. Most recently I owned the payment system behind a cloud-services self-service portal, integrating eSewa and HBL and handling every purchase made on the platform.
+I'm a backend developer with almost 4 years of experience, mostly with Laravel and Symfony. At my last job I looked after the payment service of a cloud self-service portal. It used eSewa and HBL, and every purchase on the site went through it.
 
-I'm comfortable across the stack, from Livewire and jQuery front ends to Nginx and Apache configuration and Linux servers, and I'm building my DevOps skills through a self-hosted Docker homelab.
+I also do front-end work with Livewire and jQuery, and I set up servers myself (Linux, Nginx, Apache). At home I run a small Docker server, which is how I'm learning more of the DevOps side.
 
-Based in **Kathmandu, Nepal**, and open to remote work and relocation.
+I live in **Kathmandu, Nepal**. I'm looking for remote work and I'm open to relocating.
 
 ## Education
 
