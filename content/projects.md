@@ -2,8 +2,8 @@
 
 ## Laravel Nepal Payments
 **Laravel 13 · PHP 8.4 · eSewa · Khalti · PHPUnit · GitHub Actions** | [github.com/Schaulagain/laravel-nepal-payments](https://github.com/Schaulagain/laravel-nepal-payments)
-* A demo store that takes eSewa and Khalti payments, written from scratch. It's based on the payment service I looked after at work.
-* Checks eSewa's HMAC-SHA256 signatures and asks Khalti's lookup API before marking anything paid. The browser redirect alone is never trusted.
+* A demo store that takes eSewa, Khalti and HBL card payments, written from scratch. It's based on the payment service I looked after at work.
+* Checks eSewa's HMAC-SHA256 signatures and asks Khalti's lookup API before marking anything paid.
 * Locks the payment row while applying a result, so a payment is only completed and invoiced once. A scheduled job re-checks payments where the customer never came back from the gateway.
 * 20 tests with the gateway calls faked, run on GitHub Actions with PHP 8.4 and 8.5.
 
