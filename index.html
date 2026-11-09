@@ -129,7 +129,7 @@
 <h2>Work Experience</h2>
 <h3>Career Break: International Relocation</h3>
 <p><em>Jan 2025 – Present</em></p>
-<ul><li>Building side projects with AI coding agents: an IoT water pump controller, a home server and this site (see <code>projects</code>).</li></ul>
+<ul><li>Building side projects with AI coding agents: an IoT water pump controller, a payments store, a home server and this site (see <code>projects</code>).</li></ul>
 <h3>Web Application Developer</h3>
 <p><strong>Accessworld Tech Pvt. Ltd, Lalitpur, Nepal</strong> | <em>Apr 2023 – Dec 2024</em></p>
 <ul><li>Looked after the <strong>payment service</strong> of a cloud self-service portal. We were two backend developers, and every purchase on the platform (VPS, domains, endpoints, email) went through it.</li><li>Integrated <strong>eSewa</strong> and <strong>HBL</strong>: recording transactions, handling the gateway callbacks, verifying payments and generating invoices.</li><li>Designed and built a prototype of a reward-points system where customers could spend points on portal products.</li><li>Used the <strong>VMware vSphere API</strong> from Laravel to create and change customer VMs and show live VM stats on their dashboards.</li><li>Automated hosting, email and domain products with the <strong>cPanel/WHM API</strong>, email provider APIs and domain availability and pricing APIs.</li><li>Added a multi-level approval workflow to a 24/7 data center visit management system.</li><li>Deployed apps to Linux servers (Nginx, Apache) and gathered requirements directly from banking and education clients.</li></ul>
@@ -148,10 +148,10 @@
 <p>Most of these were built with AI coding agents (mainly Claude Code): I come up with the idea, make the calls and review, and the agent writes most of the code. Each repo's README says exactly how it was made.</p>
 <h3>Water Tank Controller</h3>
 <p><strong>ESP32 · MQTT · Laravel · Livewire · Reverb · Docker · built with Claude Code</strong> | <a href="https://github.com/Schaulagain/water-tank-controller" target="_blank" rel="noopener noreferrer">github.com/Schaulagain/water-tank-controller</a></p>
-<ul><li>Fills the roof tank by itself, keeps the pump from running dry, and shows both tanks live on my phone.</li><li>The controller next to the pump makes every decision, so the tanks keep filling even if WiFi or the server is down. A simulator stands in for the hardware until it's installed.</li><li>Comes with a beginner-friendly hardware guide, so anyone with the same setup can build one.</li></ul>
+<ul><li>Fills the roof tank by itself, keeps the pump from running dry, and shows both tanks live on my phone.</li><li>The controller next to the pump makes every decision, so the tanks keep filling even if WiFi or the server is down. A simulator stands in for the hardware until it's installed.</li><li>Keeps the pump safe: a dry-run guard for when the underground tank is low, and a run limit that stops the pump until someone resets it. Both hold through power cuts.</li><li>Comes with a beginner-friendly hardware guide, so anyone with the same setup can build one.</li></ul>
 <h3>Laravel Nepal Payments</h3>
 <p><strong>Laravel 13 · PHP 8.4 · eSewa · Khalti · HBL · PHPUnit · GitHub Actions · built with Claude Code</strong> | <a href="https://github.com/Schaulagain/laravel-nepal-payments" target="_blank" rel="noopener noreferrer">github.com/Schaulagain/laravel-nepal-payments</a></p>
-<ul><li>A demo store that takes eSewa, Khalti and HBL card payments, written from scratch. It's based on the payment service I looked after at work.</li><li>Checks eSewa's HMAC-SHA256 signatures and asks Khalti's lookup API before marking anything paid.</li><li>Locks the payment row while applying a result, so a payment is only completed and invoiced once. A scheduled job re-checks payments where the customer never came back from the gateway.</li><li>20 tests with the gateway calls faked, run on GitHub Actions with PHP 8.4 and 8.5.</li></ul>
+<ul><li>A demo store that takes eSewa, Khalti and HBL card payments, written from scratch. It's based on the payment service I looked after at work.</li><li>A payment only counts once the gateway confirms the full amount: eSewa's HMAC-SHA256 signature, or a lookup through Khalti's or HBL's API.</li><li>HBL's messages are signed and encrypted JOSE tokens, handled with PHP's built-in OpenSSL functions.</li><li>Locks the payment row while applying a result, so a payment is only completed and invoiced once. A scheduled job checks again on payments where the customer never came back from the gateway.</li><li>34 tests with the gateway calls faked, run on GitHub Actions with PHP 8.4 and 8.5.</li></ul>
 <h3>Homelab</h3>
 <p><strong>Ubuntu Server 24.04 · Docker · Portainer · Pi-hole · Jellyfin · Tailscale · built with AI agents</strong> | <a href="https://github.com/Schaulagain/my-homelab" target="_blank" rel="noopener noreferrer">github.com/Schaulagain/my-homelab</a></p>
 <ul><li>An old laptop running Ubuntu Server with Pi-hole (ad blocking for the whole network), Jellyfin and Portainer in Docker.</li><li>I reach it from outside over Tailscale, so no router ports are open.</li><li>The repo has the Compose file and my setup notes.</li></ul>
@@ -173,7 +173,7 @@
     <div class="page-body md" data-page="skills">
 <h2>Skills</h2>
 <h3>Backend</h3>
-<ul><li>PHP</li><li>Laravel</li><li>Symfony</li><li>Livewire</li><li>REST APIs</li><li>WebSockets (Laravel Reverb)</li><li>Payment gateways (eSewa, HBL, IME Pay)</li></ul>
+<ul><li>PHP</li><li>Laravel</li><li>Symfony</li><li>Livewire</li><li>REST APIs</li><li>WebSockets (Laravel Reverb)</li><li>Payment gateways (eSewa, Khalti, HBL, IME Pay)</li></ul>
 <h3>Frontend</h3>
 <ul><li>JavaScript</li><li>jQuery</li><li>Livewire</li><li>HTML</li><li>CSS</li></ul>
 <h3>IoT</h3>
