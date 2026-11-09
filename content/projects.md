@@ -5,7 +5,7 @@ Most of these were built with AI coding agents (mainly Claude Code): I come up w
 ## Water Tank Controller
 **ESP32 · MQTT · Laravel · Livewire · Reverb · Docker · built with Claude Code** | [github.com/Schaulagain/water-tank-controller](https://github.com/Schaulagain/water-tank-controller)
 * Fills the roof tank by itself, keeps the pump from running dry, and shows both tanks live on my phone.
-* The ESP32 makes the decisions, so the tanks keep filling even if WiFi or the server is down. A simulator stands in for the hardware until it's installed.
+* The controller next to the pump makes every decision, so the tanks keep filling even if WiFi or the server is down. A simulator stands in for the hardware until it's installed.
 * Comes with a beginner-friendly hardware guide, so anyone with the same setup can build one.
 
 ## Laravel Nepal Payments
