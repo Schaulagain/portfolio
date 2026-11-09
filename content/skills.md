@@ -7,7 +7,7 @@
 * Livewire
 * REST APIs
 * WebSockets (Laravel Reverb)
-* Payment gateways (eSewa, HBL, IME Pay)
+* Payment gateways (eSewa, Khalti, HBL, IME Pay)
 
 ## Frontend
 * JavaScript

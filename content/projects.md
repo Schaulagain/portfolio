@@ -6,14 +6,16 @@ Most of these were built with AI coding agents (mainly Claude Code): I come up w
 **ESP32 · MQTT · Laravel · Livewire · Reverb · Docker · built with Claude Code** | [github.com/Schaulagain/water-tank-controller](https://github.com/Schaulagain/water-tank-controller)
 * Fills the roof tank by itself, keeps the pump from running dry, and shows both tanks live on my phone.
 * The controller next to the pump makes every decision, so the tanks keep filling even if WiFi or the server is down. A simulator stands in for the hardware until it's installed.
+* Keeps the pump safe: a dry-run guard for when the underground tank is low, and a run limit that stops the pump until someone resets it. Both hold through power cuts.
 * Comes with a beginner-friendly hardware guide, so anyone with the same setup can build one.
 
 ## Laravel Nepal Payments
 **Laravel 13 · PHP 8.4 · eSewa · Khalti · HBL · PHPUnit · GitHub Actions · built with Claude Code** | [github.com/Schaulagain/laravel-nepal-payments](https://github.com/Schaulagain/laravel-nepal-payments)
 * A demo store that takes eSewa, Khalti and HBL card payments, written from scratch. It's based on the payment service I looked after at work.
-* Checks eSewa's HMAC-SHA256 signatures and asks Khalti's lookup API before marking anything paid.
-* Locks the payment row while applying a result, so a payment is only completed and invoiced once. A scheduled job re-checks payments where the customer never came back from the gateway.
-* 20 tests with the gateway calls faked, run on GitHub Actions with PHP 8.4 and 8.5.
+* A payment only counts once the gateway confirms the full amount: eSewa's HMAC-SHA256 signature, or a lookup through Khalti's or HBL's API.
+* HBL's messages are signed and encrypted JOSE tokens, handled with PHP's built-in OpenSSL functions.
+* Locks the payment row while applying a result, so a payment is only completed and invoiced once. A scheduled job checks again on payments where the customer never came back from the gateway.
+* 34 tests with the gateway calls faked, run on GitHub Actions with PHP 8.4 and 8.5.
 
 ## Homelab
 **Ubuntu Server 24.04 · Docker · Portainer · Pi-hole · Jellyfin · Tailscale · built with AI agents** | [github.com/Schaulagain/my-homelab](https://github.com/Schaulagain/my-homelab)
