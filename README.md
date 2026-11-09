@@ -25,6 +25,10 @@ npm run build   # one-off build into dist/
 
 No npm dependencies. You only need Node 20 or newer.
 
+## How this was built
+
+I made the first version in 2024. In 2026 I rebuilt it with AI coding agents (Claude Code): I decided what it should be and reviewed the changes, and the agents wrote most of the code and the content wording.
+
 ## Deploying
 
 Pushing to `master` runs `.github/workflows/deploy.yml`, which builds `dist/` and publishes it to GitHub Pages.

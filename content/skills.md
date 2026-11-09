@@ -6,6 +6,7 @@
 * Symfony
 * Livewire
 * REST APIs
+* WebSockets (Laravel Reverb)
 * Payment gateways (eSewa, HBL, IME Pay)
 
 ## Frontend
@@ -14,6 +15,11 @@
 * Livewire
 * HTML
 * CSS
+
+## IoT
+* ESP32
+* MQTT (Mosquitto)
+* Sensors and relays
 
 ## Databases
 * MySQL
@@ -33,6 +39,8 @@
 ## Also
 * Python
 * TypeScript
+* Rust (learning)
+* AI coding agents (Claude Code)
 * Git
 * Postman
 * Jira
