@@ -1,3 +1,8 @@
+## Working here
+
+- Page text lives in `content/*.md`. `npm run build` renders it into `dist/`, which is ignored by git and deployed to GitHub Pages on every push to `master`. `npm run dev` serves it locally.
+- `resume.pdf` and `resume.docx` are maintained by hand. Keep them in step with `content/experience.md` and `content/skills.md` when either changes.
+
 ## Agent skills
 
 ### Issue tracker
