@@ -2,7 +2,7 @@
 
 ## Career Break: International Relocation
 *Jan 2025 – Present*
-* Set up a Docker server at home and rebuilt this site, which now deploys automatically from GitHub (see `projects`).
+* Building side projects with AI coding agents: an IoT water pump controller, a home server and this site (see `projects`).
 
 ## Web Application Developer
 **Accessworld Tech Pvt. Ltd, Lalitpur, Nepal** | *Apr 2023 – Dec 2024*
