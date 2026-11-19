@@ -1,6 +1,6 @@
 # About Me
 
-I'm a software engineer in **Kathmandu, Nepal**. For almost 4 years I built backends, mostly in Laravel and Symfony. At my last job I looked after the payment service of a cloud self-service portal. It used eSewa and HBL, and every purchase on the site went through it.
+I'm a software engineer in **Athlone, Ireland**. For almost 4 years I built backends, mostly in Laravel. At my last job I looked after the payment service of a cloud self-service portal. It used eSewa and HBL, and every purchase on the site went through it.
 
 That's where most of my experience is, but it's only part of what I'm interested in. These days I'm exploring:
 
@@ -9,7 +9,7 @@ That's where most of my experience is, but it's only part of what I'm interested
 * **Machine learning**: I started with a small image classifier and want to go further
 * **Other languages**: TypeScript, Python, and some Rust
 
-I'm looking for remote work and I'm open to relocating.
+I'm looking for work in Ireland, on-site, hybrid or remote.
 
 ## How I work
 

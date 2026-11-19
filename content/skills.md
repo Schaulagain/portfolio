@@ -3,7 +3,6 @@
 ## Backend
 * PHP
 * Laravel
-* Symfony
 * Livewire
 * REST APIs
 * WebSockets (Laravel Reverb)

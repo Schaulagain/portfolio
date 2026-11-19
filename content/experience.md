@@ -1,8 +1,9 @@
 # Work Experience
 
-## Career Break: International Relocation
-*Jan 2025 – Present*
-* Building side projects with AI coding agents: an IoT water pump controller, a payments store, a home server and this site (see `projects`).
+## Freelance Software Developer
+**Self-employed, Remote** | *Jan 2025 – Present*
+* Building my own projects (see `projects`): an IoT water pump controller, a payments store, a home server and this site.
+* I work with AI coding agents (Claude Code): I design, test and review, and the agents write most of the code.
 
 ## Web Application Developer
 **Accessworld Tech Pvt. Ltd, Lalitpur, Nepal** | *Apr 2023 – Dec 2024*
@@ -23,5 +24,5 @@
 ## Software Engineer
 **Red Tail Fox Pvt. Ltd, Kathmandu, Nepal** | *Mar 2021 – Oct 2021*
 * Added **eSewa** and **IME Pay** payments to ramailogames.com, an online gaming site, and turned it into a Progressive Web App.
-* Worked on the backends of an e-sports tournament site and a video streaming service (Laravel, Symfony).
+* Worked on the backends of an e-sports tournament site and a video streaming service (Laravel, with some Symfony).
 * Wrote Python scripts for web scraping and data processing, and drew up database designs (ERDs) for new systems.
