@@ -21,7 +21,7 @@ LINKS = [
     ("sumchaulagain@gmail.com", "mailto:sumchaulagain@gmail.com"),
     ("linkedin.com/in/suman-chaulagain", "https://linkedin.com/in/suman-chaulagain"),
     ("github.com/Schaulagain", "https://github.com/Schaulagain"),
-    ("sumanchaulagain.info.np", "https://sumanchaulagain.info.np"),
+    ("sumanchaulagain.info.np", "https://sumanchaulagain.info.np/?ref=cv"),  # ref shows up in GoatCounter
 ]
 
 PROFILE = (

@@ -2,6 +2,7 @@
 
 - Page text lives in `content/*.md`. `npm run build` renders it into `dist/`, which is ignored by git and deployed to GitHub Pages on every push to `master`. `npm run dev` serves it locally.
 - The CV text lives in `tools/resume.py`. Keep it in step with `content/experience.md` and `content/skills.md`. Rebuild with `python3 tools/resume.py screen resume.docx` (needs python-docx), then `soffice --headless --convert-to pdf resume.docx`. The `print` mode makes Suman's paper copy with his phone number, and that copy stays out of the repo.
+- Analytics: Cloudflare Web Analytics is added by Cloudflare itself. GoatCounter turns on when `content/config.md` has a `goatcounter:` site code. Event names come from `track()` and `linkEvent()` in `js/site.js`; keep them stable, since renaming one starts a new series in the dashboard.
 
 ## Writing style
 

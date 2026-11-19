@@ -18,6 +18,30 @@ const store = (kind) => ({
 const local = store('localStorage');
 const session = store('sessionStorage');
 
+// ---------- analytics ----------
+
+// Sends a GoatCounter event. count.js loads async, so wait up to ~5s for it.
+// Does nothing when GoatCounter is off or blocked.
+function track(name) {
+    if (!config.goatcounter) return;
+    const ready = () => typeof window.goatcounter?.count === 'function';
+    const send = () => ready() && window.goatcounter.count({ path: name, title: name, event: true });
+    if (ready()) { send(); return; }
+    let tries = 0;
+    const timer = setInterval(() => {
+        if (ready() || ++tries > 20) { clearInterval(timer); send(); }
+    }, 250);
+}
+
+// What a clicked link means, as an event name (or null for plain in-page links).
+function linkEvent(a) {
+    const href = a.getAttribute('href') || '';
+    if (href.startsWith('mailto:')) return 'email-click';
+    if (href === 'resume.pdf') return a.hasAttribute('download') ? 'resume-download' : 'resume-open';
+    if (a.host && a.host !== location.host) return `out-${a.host}${a.pathname.replace(/\/$/, '')}`;
+    return null;
+}
+
 // ---------- helpers ----------
 
 function hydrateEmails() {
@@ -147,6 +171,7 @@ class Terminal {
 
         const [name, ...args] = text.split(/\s+/);
         const command = this.commands[name.toLowerCase()];
+        track(command ? `cmd-${name.toLowerCase()}` : 'cmd-unknown');
         this.busy = true;
         try {
             if (command) {
@@ -362,7 +387,8 @@ function createCommands(term) {
                 const a = document.createElement('a');
                 a.href = 'resume.pdf';
                 a.download = `${config.name} - Resume.pdf`;
-                a.click();
+                a.click(); // detached link: the document click listener never sees it
+                track('resume-download');
                 return `Saved to your downloads. Prefer to read it here? <a href="resume.pdf" target="_blank" rel="noopener">Open in a new tab</a>.`;
             },
         },
@@ -502,6 +528,10 @@ matrix.set(local.get('matrix') ? local.get('matrix') === 'on' : !reducedMotion);
 const terminal = new Terminal();
 
 document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href]');
+    const event = link && linkEvent(link);
+    if (event) track(event);
+
     const trigger = e.target.closest('[data-cmd]');
     if (!trigger) return;
     e.preventDefault();

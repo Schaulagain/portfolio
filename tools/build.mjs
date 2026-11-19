@@ -69,6 +69,11 @@ ${html}
     };
     const json = (o) => JSON.stringify(o).replace(/</g, '\\u003c');
 
+    // GoatCounter is on only when config.md has a `goatcounter:` site code.
+    const gc = config.goatcounter || '';
+    if (gc && !/^[a-z0-9-]+$/.test(gc)) throw new Error(`config.md: bad goatcounter code "${gc}"`);
+    const gcEndpoint = gc && `https://${gc}.goatcounter.com/count`;
+
     const vars = {
         ...config,
         year: new Date().getFullYear(),
@@ -78,6 +83,9 @@ ${html}
         nav: PAGES.map(([name]) => `<a href="#${name}">${name}</a>`).join(''),
         configJson: json({ ...publicConfig, pages: PAGES.map(([name]) => name) }),
         jsonLd: json(jsonLd),
+        gcScriptSrc: gc && ' https://gc.zgo.at',
+        gcConnectSrc: gc && ` ${gcEndpoint}`,
+        gcTag: gc && `<script data-goatcounter="${gcEndpoint}" async src="https://gc.zgo.at/count.js"></script>`,
     };
 
     await fs.rm(dist, { recursive: true, force: true });
