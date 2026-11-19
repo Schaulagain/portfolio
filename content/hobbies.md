@@ -4,7 +4,6 @@
 - Web development
 - Tinkering with my home server
 - Electronics and IoT
-- Trying out AI coding agents
 - Command-line tools
 
 ## Personal

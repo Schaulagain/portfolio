@@ -1,9 +1,7 @@
-# Contact Information
+# Contact
 
-**Email**: [sumchaulagain@gmail.com](mailto:sumchaulagain@gmail.com)
+Email is the best way to reach me: [sumchaulagain@gmail.com](mailto:sumchaulagain@gmail.com)
 
-**Social Media**:
-- [GitHub](https://github.com/Schaulagain)
-- [LinkedIn](https://linkedin.com/in/suman-chaulagain)
+You can also find me on [GitHub](https://github.com/Schaulagain) and [LinkedIn](https://linkedin.com/in/suman-chaulagain).
 
-Email is the best way to reach me. I'm happy to talk about jobs or anything on this site.
+I'm happy to talk about jobs or anything on this site.

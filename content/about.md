@@ -1,22 +1,16 @@
 # About Me
 
-I'm a software engineer in **Athlone, Ireland**. For almost 4 years I built backends, mostly in Laravel. At my last job I looked after the payment service of a cloud self-service portal. It used eSewa and HBL, and every purchase on the site went through it.
+I'm a software engineer based in Athlone, Ireland. I've spent almost 4 years building backends, mostly in Laravel. At my last job I built and looked after the payment system for a cloud self-service portal, and every purchase on the site went through it.
 
-That's where most of my experience is, but it's only part of what I'm interested in. These days I'm exploring:
+That's where most of my experience is, but I'm interested in more than backend work. Lately I've been spending time on:
 
-* **IoT and hardware**: an ESP32 controller that runs the water pump at home
-* **Infrastructure and self-hosting**: Linux, Docker and Tailscale on a home server
-* **Machine learning**: I started with a small image classifier and want to go further
-* **Other languages**: TypeScript, Python, and some Rust
+* IoT and hardware, like the ESP32 controller that runs the water pump at home
+* Infrastructure and self-hosting, with Linux, Docker and Tailscale on a home server
+* Machine learning, starting with a small image classifier
+* Other languages, mainly TypeScript, Python and a bit of Rust
 
 I'm looking for work in Ireland, on-site, hybrid or remote.
 
-## How I work
-
-Most of my recent projects were built with AI coding agents, mainly Claude Code. I come up with the idea, make the design decisions, test things and give feedback, and the agent writes most of the code and docs. Each project's README says how it was built, so you can see who did what.
-
 ## Education
 
-* **BSc (Hons) Computing (Software Engineering)**
-    * University of Northampton, Northampton, United Kingdom
-    * Sep 2017 – Dec 2020
+BSc (Hons) Computing (Software Engineering), University of Northampton, UK, 2017 to 2020

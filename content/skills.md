@@ -38,8 +38,6 @@
 ## Also
 * Python
 * TypeScript
-* Rust (learning)
-* AI coding agents (Claude Code)
 * Git
 * Postman
 * Jira
