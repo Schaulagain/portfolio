@@ -2,11 +2,15 @@
 
     python3 tools/resume.py screen resume.docx      # one page, links, accent colour (for the site)
     python3 tools/resume.py print  out/CV.docx      # A4 paper: black text, bigger type, phone number
+    python3 tools/resume.py remote out/CV.docx      # print layout with Kathmandu, Nepali number, remote wording
 
 Needs python-docx. Convert to PDF with:
     soffice --headless --convert-to pdf <file>.docx
 """
+import json
 import sys
+from pathlib import Path
+
 import docx
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_TAB_ALIGNMENT
 from docx.oxml import OxmlElement
@@ -16,7 +20,14 @@ from docx.shared import Cm, Pt, RGBColor
 NAME = "SUMAN CHAULAGAIN"
 TITLE = "Backend Software Engineer"
 LOCATION = "Athlone, Co. Westmeath, Ireland"
-PHONE = "[phone]"
+# International/remote applications use Kathmandu; Irish ones use Athlone.
+REMOTE_LOCATION = "Kathmandu, Nepal (UTC+5:45)"
+# Phone numbers live in tools/private.json (gitignored) so they stay out of the public repo:
+#   {"phone": "+353 ...", "remote_phone": "+977 ..."}
+_private = Path(__file__).with_name("private.json")
+_PRIVATE = json.loads(_private.read_text()) if _private.exists() else {}
+PHONE = _PRIVATE.get("phone", "[phone]")
+REMOTE_PHONE = _PRIVATE.get("remote_phone", "[phone]")
 LINKS = [
     ("sumchaulagain@gmail.com", "mailto:sumchaulagain@gmail.com"),
     ("linkedin.com/in/suman-chaulagain", "https://linkedin.com/in/suman-chaulagain"),
@@ -28,8 +39,13 @@ PROFILE = (
     "Software engineer with almost 4 years of backend experience, mostly in PHP and Laravel. "
     "Built and looked after the payment system for a cloud self-service portal, and worked on its "
     "virtual machine and hosting features. Freelancing since 2025 on my own IoT and home server "
-    "projects. Open to backend, infrastructure or IoT roles in Ireland, abroad or remote."
+    "projects. "
 )
+PROFILE_END = {
+    "screen": "Open to backend, infrastructure or IoT roles in Ireland, abroad or remote.",
+    "print": "Open to backend, infrastructure or IoT roles in Ireland, abroad or remote.",
+    "remote": "Looking for remote backend work on European, UK or Gulf hours, and open to relocation.",
+}
 
 SKILLS = [
     ("Backend", "PHP, Laravel, Livewire, REST APIs, WebSockets"),
@@ -87,6 +103,7 @@ STYLES = {
                   accent=RGBColor(0, 0, 0), muted=RGBColor(0x33, 0x33, 0x33),
                   links=False, phone=True),
 }
+STYLES["remote"] = dict(STYLES["print"], location=REMOTE_LOCATION, phone_no=REMOTE_PHONE)
 
 
 def build(mode, out):
@@ -168,9 +185,9 @@ def build(mode, out):
     run(para(after=1, align=WD_ALIGN_PARAGRAPH.CENTER), TITLE, size=s["body"] + 1, bold=True,
         color=s["accent"])
     links = LINKS
-    where = LOCATION
+    where = s.get("location", LOCATION)
     if s["phone"]:  # print: phone and website share the location line so the links fit on one
-        where += f"  |  {PHONE}  |  {LINKS[-1][0]}"
+        where += f"  |  {s.get('phone_no', PHONE)}  |  {LINKS[-1][0]}"
         links = LINKS[:-1]
     run(para(align=WD_ALIGN_PARAGRAPH.CENTER), where, size=s["small"])
     p = para(align=WD_ALIGN_PARAGRAPH.CENTER)
@@ -180,7 +197,7 @@ def build(mode, out):
         link(p, text, url)
 
     heading("Profile")
-    run(para(), PROFILE)
+    run(para(), PROFILE + PROFILE_END[mode])
 
     heading("Skills")
     for label, items in SKILLS:
