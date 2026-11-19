@@ -19,15 +19,9 @@ from docx.shared import Cm, Pt, RGBColor
 
 NAME = "SUMAN CHAULAGAIN"
 TITLE = "Backend Software Engineer"
-LOCATION = "Athlone, Co. Westmeath, Ireland"
-# International/remote applications use Kathmandu; Irish ones use Athlone.
-REMOTE_LOCATION = "Kathmandu, Nepal (UTC+5:45)"
 # Phone numbers live in tools/private.json (gitignored) so they stay out of the public repo:
 #   {"phone": "+353 ...", "remote_phone": "+977 ..."}
-_private = Path(__file__).with_name("private.json")
-_PRIVATE = json.loads(_private.read_text()) if _private.exists() else {}
-PHONE = _PRIVATE.get("phone", "[phone]")
-REMOTE_PHONE = _PRIVATE.get("remote_phone", "[phone]")
+PRIVATE_FILE = Path(__file__).with_name("private.json")
 LINKS = [
     ("sumchaulagain@gmail.com", "mailto:sumchaulagain@gmail.com"),
     ("linkedin.com/in/suman-chaulagain", "https://linkedin.com/in/suman-chaulagain"),
@@ -39,13 +33,11 @@ PROFILE = (
     "Software engineer with almost 4 years of backend experience, mostly in PHP and Laravel. "
     "Built and looked after the payment system for a cloud self-service portal, and worked on its "
     "virtual machine and hosting features. Freelancing since 2025 on my own IoT and home server "
-    "projects. "
+    "projects."
 )
-PROFILE_END = {
-    "screen": "Open to backend, infrastructure or IoT roles in Ireland, abroad or remote.",
-    "print": "Open to backend, infrastructure or IoT roles in Ireland, abroad or remote.",
-    "remote": "Looking for remote backend work on European, UK or Gulf hours, and open to relocation.",
-}
+OPEN_TO = "Open to backend, infrastructure or IoT roles in Ireland, abroad or remote."
+REMOTE_OPEN_TO = "Looking for remote backend work on European, UK or Gulf hours, and open to relocation."
+ATHLONE = "Athlone, Co. Westmeath, Ireland"
 
 SKILLS = [
     ("Backend", "PHP, Laravel, Livewire, REST APIs, WebSockets"),
@@ -98,12 +90,21 @@ EDUCATION = ("BSc (Hons) Computing (Software Engineering)",
 STYLES = {
     "screen": dict(margin=Cm(1.4), body=9.5, small=9, head=10, name=18, gap=2, spacing=1.08,
                    accent=RGBColor(0x1F, 0x5C, 0x46), muted=RGBColor(0x55, 0x55, 0x55),
-                   links=True, phone=False),
+                   links=True, location=ATHLONE, phone_key=None, open_to=OPEN_TO),
     "print": dict(margin=Cm(1.8), body=10, small=9.5, head=10.5, name=20, gap=3, spacing=1.04,
                   accent=RGBColor(0, 0, 0), muted=RGBColor(0x33, 0x33, 0x33),
-                  links=False, phone=True),
+                  links=False, location=ATHLONE, phone_key="phone", open_to=OPEN_TO),
 }
-STYLES["remote"] = dict(STYLES["print"], location=REMOTE_LOCATION, phone_no=REMOTE_PHONE)
+# International applications use Kathmandu and the Nepali number; Irish ones use print.
+STYLES["remote"] = dict(STYLES["print"], location="Kathmandu, Nepal (UTC+5:45)",
+                        phone_key="remote_phone", open_to=REMOTE_OPEN_TO)
+
+
+def phone_for(key):
+    try:
+        return json.loads(PRIVATE_FILE.read_text())[key]
+    except (FileNotFoundError, KeyError):
+        sys.exit(f"{PRIVATE_FILE} needs a {key!r} entry for this mode")
 
 
 def build(mode, out):
@@ -185,9 +186,9 @@ def build(mode, out):
     run(para(after=1, align=WD_ALIGN_PARAGRAPH.CENTER), TITLE, size=s["body"] + 1, bold=True,
         color=s["accent"])
     links = LINKS
-    where = s.get("location", LOCATION)
-    if s["phone"]:  # print: phone and website share the location line so the links fit on one
-        where += f"  |  {s.get('phone_no', PHONE)}  |  {LINKS[-1][0]}"
+    where = s["location"]
+    if s["phone_key"]:  # paper copies: phone and website share the location line so the links fit
+        where += f"  |  {phone_for(s['phone_key'])}  |  {LINKS[-1][0]}"
         links = LINKS[:-1]
     run(para(align=WD_ALIGN_PARAGRAPH.CENTER), where, size=s["small"])
     p = para(align=WD_ALIGN_PARAGRAPH.CENTER)
@@ -197,7 +198,7 @@ def build(mode, out):
         link(p, text, url)
 
     heading("Profile")
-    run(para(), PROFILE + PROFILE_END[mode])
+    run(para(), f"{PROFILE} {s['open_to']}")
 
     heading("Skills")
     for label, items in SKILLS:

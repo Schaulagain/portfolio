@@ -1,7 +1,7 @@
 ## Working here
 
 - Page text lives in `content/*.md`. `npm run build` renders it into `dist/`, which is ignored by git and deployed to GitHub Pages on every push to `master`. `npm run dev` serves it locally.
-- The CV text lives in `tools/resume.py`. Keep it in step with `content/experience.md` and `content/skills.md`. Rebuild with `python3 tools/resume.py screen resume.docx` (needs python-docx), then `soffice --headless --convert-to pdf resume.docx`. The `print` mode makes Suman's paper copy with his phone number, and `remote` makes the international version (Kathmandu, Nepali number, remote wording). Phone numbers come from the gitignored `tools/private.json`. Both stay out of the repo: Irish applications use `print`, international ones use `remote`.
+- The CV text lives in `tools/resume.py`. Keep it in step with `content/experience.md` and `content/skills.md`. Rebuild with `python3 tools/resume.py screen resume.docx` (needs python-docx), then `soffice --headless --convert-to pdf resume.docx`. The `print` mode makes Suman's paper copy with his phone number, and `remote` makes the international version (Kathmandu, Nepali number, remote wording). Irish applications use `print`, international ones use `remote`. The print and remote CVs aren't committed, and their phone numbers come from the gitignored `tools/private.json` (keys `phone` and `remote_phone`).
 - Analytics: Cloudflare Web Analytics is added by Cloudflare itself. GoatCounter turns on when `content/config.md` has a `goatcounter:` site code. Event names come from `track()` and `linkEvent()` in `js/site.js`; keep them stable, since renaming one starts a new series in the dashboard.
 
 ## Writing style
