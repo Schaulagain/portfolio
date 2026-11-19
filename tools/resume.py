@@ -77,7 +77,7 @@ PROJECTS = [
 ]
 
 EDUCATION = ("BSc (Hons) Computing (Software Engineering)",
-             "University of Northampton, Northampton, UK", "Sep 2017 – Dec 2020")
+             "University of Northampton, Northampton, UK", "Sep 2017 – Sep 2020")
 
 STYLES = {
     "screen": dict(margin=Cm(1.4), body=9.5, small=9, head=10, name=18, gap=2, spacing=1.08,
