@@ -1,7 +1,7 @@
 username: suman
 name: Suman Chaulagain
 role: Software Engineer
-tagline: Software engineer in Athlone, Ireland. Backend work by trade, now exploring IoT, infrastructure and machine learning. Looking for work in Ireland.
+tagline: Software engineer in Athlone, Ireland. Backend work by trade, now exploring IoT, infrastructure and machine learning. Open to work in Ireland, abroad or remote.
 description: Suman Chaulagain is a software engineer in Athlone, Ireland, with almost 4 years of backend experience, mostly in Laravel, now exploring IoT, self-hosted infrastructure and machine learning.
 url: https://sumanchaulagain.info.np
 email: sumchaulagain@gmail.com

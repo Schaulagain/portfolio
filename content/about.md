@@ -9,7 +9,7 @@ That's where most of my experience is, but I'm interested in more than backend w
 * Machine learning, starting with a small image classifier
 * Other languages, mainly TypeScript, Python and a bit of Rust
 
-I'm looking for work in Ireland, on-site, hybrid or remote.
+I'm open to work in Ireland, abroad or remote, wherever there's room to grow.
 
 ## Education
 

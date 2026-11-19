@@ -28,7 +28,7 @@ PROFILE = (
     "Software engineer with almost 4 years of backend experience, mostly in PHP and Laravel. "
     "Built and looked after the payment system for a cloud self-service portal, and worked on its "
     "virtual machine and hosting features. Freelancing since 2025 on my own IoT and home server "
-    "projects. Looking for backend, infrastructure or IoT work in Ireland."
+    "projects. Open to backend, infrastructure or IoT roles in Ireland, abroad or remote."
 )
 
 SKILLS = [
