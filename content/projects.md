@@ -8,7 +8,7 @@ ESP32, MQTT, Laravel, Livewire, Docker | [github.com/Schaulagain/water-tank-cont
 
 ## Laravel Nepal Payments
 Laravel, PHP, PHPUnit, GitHub Actions | [github.com/Schaulagain/laravel-nepal-payments](https://github.com/Schaulagain/laravel-nepal-payments)
-* A demo store that takes payments through three Nepali gateways, based on the payment system I looked after at work.
+* A demo store that takes payments through three Nepali gateways, modelled on what I built at work.
 * A payment only counts once the gateway confirms it, and each order is invoiced exactly once.
 * Tested, with the tests running on GitHub Actions.
 
@@ -24,7 +24,7 @@ Node.js, GitHub Actions, Cloudflare | [source](https://github.com/Schaulagain/po
 
 ## Cloud Self-Service Portal (Accessworld Tech)
 PHP, Laravel, VMware vSphere | https://portal.awt.cloud
-* Where customers buy and manage servers, domains, hosting and email. I looked after the payment system and worked on the virtual machine features.
+* Where customers buy and manage servers, domains, hosting and email. I built the payments side and worked on the virtual machine features.
 
 ## Festival Management Database
 Oracle PL/SQL | [github.com/Schaulagain/SQLProject](https://github.com/Schaulagain/SQLProject)
